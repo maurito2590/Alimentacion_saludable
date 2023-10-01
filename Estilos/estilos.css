@@ -181,6 +181,7 @@ body {
     color: #0ec21d; /* Cambia el color al pasar el mouse por encima */
 }
 
+
 .pie-pagina {
     background-color: #f7f7f7;
     padding: 40px 0;
@@ -260,28 +261,27 @@ body {
 .nav__input:checked + .nav__menu {
     clip-path: circle(100% at center);
 }
-/* Estilos para el carrusel */
-.carousel-item {
-    text-align: center; /* Centrar el contenido horizontalmente */
-}
+
+/* .carousel-item {
+    text-align: center; 
+} 
 
 .c-img {
-    max-width: 100%; /* Asegura que la imagen se ajuste al ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 100%; 
+    height: auto; 
 }
 
 .carousel-caption {
     position: absolute;
-    top: 50%; /* Centrar verticalmente */
+    top: 50%; 
     left: 0;
     right: 0;
     transform: translateY(-50%);
-    text-align: center;
+    text-align: center;*/
 }
 .pie-pagina .grupo-1 {
     width: 90%;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     padding: 35px 0;
-}
 }
