@@ -65,29 +65,31 @@
         </div>
       </nav>
     </header>
-    <section class="container-fluid">
-      <div class="row row-cols-lg-4 d-flex justify-content-evenly align-self-center">
-        <div class="col border border-dark-subtle m-2">
-          <div>
-            <img src="/media/tienda/OIP-removebg-preview.png" alt="imagen de producto" class="img-fluid">        
-          </div>
-        </div>
-        <div class="col border border-dark-subtle m-2">
-          <div>
-            <img src="/media/tienda/OIP-removebg-preview.png" alt="imagen de producto" class="img-fluid">    
-          </div>
-        </div>
-        <div class="col border border-dark-subtle m-2">
-          <div>
-            <img src="/media/tienda/OIP-removebg-preview.png" alt="imagen de producto" class="img-fluid"> 
-          </div>
-        </div>
-        <div class="col border border-dark-subtle m-2">
-          <div>
-            <img src="/media/tienda/OIP-removebg-preview.png" alt="imagen de producto" class="img-fluid">  
-          </div>
-        </div>
-      </div>
+    <section class="categoria">
+      <h2>Ingredientes Básicos Veganos</h2>
+      <article>
+        <h3>Legumbres</h3>
+        <p>Precio: 1500</p>
+        <p>Cantidad disponible: 10</p>
+        <button onclick="agregarAlCarrito('Legumbres')">Agregar al carrito</button>
+        <button onclick="quitarDelCarrito('Legumbres')">Quitar del carrito</button>
+      </article>
+      <article>
+        <h3>Vegetales</h3>
+        <p>Precio: 1700</p>
+        <p>Cantidad disponible: 15</p>
+        <button onclick="agregarAlCarrito('Vegetales')">Agregar al carrito</button>
+        <button onclick="quitarDelCarrito('Vegetales')">Quitar del carrito</button>
+      </article>
+      <article>
+        <h3>Frutas</h3>
+        <p>Precio: 1200</p>
+        <p>Cantidad disponible: 20</p>
+        <button onclick="agregarAlCarrito('Frutas')">Agregar al carrito</button>
+        <button onclick="quitarDelCarrito('Frutas')">Quitar del carrito</button>
+      </article>
+      <!-- Continúa con más elementos article para otros ingredientes de esta categoría -->
     </section>
+    
   </body>
 </html>
