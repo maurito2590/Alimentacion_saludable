@@ -185,7 +185,6 @@ section {
   transition: 0.4s linear;
 }
 
-<<<<<<< Updated upstream
 .header .search-form input {
   height: 100%;
   width: 100%;
@@ -194,13 +193,8 @@ section {
   font-size: 1.6rem;
   color: var(--black);
   padding: 0 1.5rem;
-=======
-.c-img {
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7); 
->>>>>>> Stashed changes
 }
+
 
 .header .search-form label {
   font-size: 2.2rem;
@@ -441,7 +435,6 @@ section {
     width: 100%;
   }
 
-<<<<<<< Updated upstream
   #menu-btn {
     display: inline-block;
   }
@@ -470,33 +463,4 @@ section {
   .servicios .box-conteiner .box {
     padding: 1rem;
   }
-=======
-.nav__input:checked + .nav__menu {
-    clip-path: circle(100% at center);
-}
-
-.carousel-item {
-    text-align: center; 
-} 
-
-.c-img {
-    max-width: 100%; 
-    height: auto; 
-}
-
-.carousel-caption {
-    position: absolute;
-    top: 50%; 
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    text-align: center;
-}
-.pie-pagina .grupo-1 {
-    width: 90%;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 30px;
-    padding: 35px 0;
->>>>>>> Stashed changes
-}
 }
