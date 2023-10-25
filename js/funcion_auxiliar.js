@@ -1,4 +1,4 @@
-const ingredientesJSON = {
+let ingredientesJSON = {
   "categoriasDeIngredientes": [
     {
       "categoria": "Ingredientes Básicos Veganos",
@@ -61,98 +61,24 @@ const ingredientesJSON = {
   ]
 }
 
-const carritoDeCompras = [];
-let precioTotalCarrito = 0;
 
-
-// Actualización en tiempo real
-function actualizarInfoProductoEnDOM(productoID) {
-  const producto = ingredientesJSON.categoriasDeIngredientes.reduce((prev, current) => {
-    return prev.concat(current.ingredientes);
-  }, []).find(ingrediente => ingrediente.ID === productoID);
-
-  if (producto) {
-    document.getElementById(`cantidad${productoID}`).textContent = producto.cantidad;
-  } else {
-    console.error(`Producto con ID ${productoID} no encontrado en el JSON.`);
-  }
-}
-
-// Agregar ingredientes
-function agregarAlCarrito(ingredienteID) {
+// Cargar los precios y la cantidad al inicio
+function cargarPreciosYCantidad() {
   for (const categoria of ingredientesJSON.categoriasDeIngredientes) {
     for (const ingrediente of categoria.ingredientes) {
-      if (ingrediente.ID === ingredienteID) {
-        if (ingrediente.cantidad > 0) {
-          ingrediente.cantidad--;
-          carritoDeCompras.push({ nombre: ingrediente.nombre, precio: ingrediente.precio });
-          calcularTotalCarrito();
-          actualizarInfoProductoEnDOM(ingredienteID); // Actualiza la cantidad en el DOM
-          return `Se ha agregado ${ingrediente.nombre} al carrito.`;
-        } else {
-          // Alerta cuando no hay ingrediente.
-          alert(`El ingrediente ${ingrediente.nombre} no está disponible.`);
-          return `El ingrediente ${ingrediente.nombre} no está disponible.`;
-        }
+      const elementoCantidad = document.getElementById(`cantidad${ingrediente.ID}`); // Cambio en la búsqueda del elemento
+      const elementoPrecio = document.getElementById(`precio${ingrediente.ID}`); // Cambio en la búsqueda del elemento
+
+      if (elementoCantidad) {
+        elementoCantidad.textContent = ingrediente.cantidad;
       }
-    }
-  }
-  return `El ingrediente con ID ${ingredienteID} no se encontró en el JSON de ingredientes.`;
-}
 
-
-
-// Quitar ingredientes
-function quitarDelCarrito(ingredienteID) {
-  const index = carritoDeCompras.findIndex(ingrediente => ingrediente.nombre === ingredienteID);
-
-  if (index !== -1) {
-    const ingrediente = carritoDeCompras[index];
-    incrementarCantidadDisponible(ingredienteID); // Usar el ID
-    carritoDeCompras.splice(index, 1);
-    calcularTotalCarrito();
-    actualizarInfoProductoEnDOM(ingredienteID); // Actualizar la cantidad en el DOM
-    return `Se ha quitado ${ingrediente.nombre} del carrito.`;
-  } else {
-    return `El ingrediente con ID ${ingredienteID} no se encontró en el carrito.`;
-  }
-}
-
-
-// Incrementar la cantidad disponible de un ingrediente en el JSON
-function incrementarCantidadDisponible(ingredienteID) {
-  for (const categoria of ingredientesJSON.categoriasDeIngredientes) {
-    for (const ingredienteEnMatriz of categoria.ingredientes) {
-      if (ingredienteID === ingredienteEnMatriz.ID) {
-        ingredienteEnMatriz.cantidad++;
-        return;
+      if (elementoPrecio) {
+        elementoPrecio.textContent = ingrediente.precio;
       }
     }
   }
 }
 
-
-// Calcular el valor total del carrito
-function calcularTotalCarrito() {
-  precioTotalCarrito = 0;
-  for (const ingrediente of carritoDeCompras) {
-    precioTotalCarrito += ingrediente.precio;
-  }
-
-  // Actualiza el contenido del elemento con el precio total
-  const cartTotalPriceElement = document.getElementById("total-carrito");
-  if (cartTotalPriceElement) {
-    cartTotalPriceElement.textContent = `Precio Total: $${precioTotalCarrito.toFixed(2)}`;
-  }
-
-  // Verifica si el carrito tiene elementos y muestra/oculta el enlace "Comprar"
-  const comprarLink = document.getElementById("comprar-link");
-  if (comprarLink) {
-    if (precioTotalCarrito > 0) {
-      comprarLink.style.display = "block"; // Muestra el enlace
-    } else {
-      comprarLink.style.display = "none"; // Oculta el enlace
-    }
-  }
-}
-
+// Llamarla al inicio
+window.addEventListener('load', cargarPreciosYCantidad);
