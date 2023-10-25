@@ -3,15 +3,15 @@ const ingredientesJSON = {
     {
       "categoria": "Ingredientes Básicos Veganos",
       "ingredientes": [
-        { "nombre": "Vegetales", "ID": "Vegetales", "precio": 2345, "cantidad": 15 },
-        { "nombre": "Frutas", "ID": "Frutas", "precio": 567, "cantidad": 20 },
-        { "nombre": "Cereales", "ID": "Cereales", "precio": 1987, "cantidad": 12 },
-        { "nombre": "Semillas", "ID": "Semillas", "precio": 2435, "cantidad": 8 },
-        { "nombre": "Frutos secos", "ID": "FrutosSecos", "precio": 789, "cantidad": 5 },
-        { "nombre": "Fécula de mandioca", "ID": "FeculaMandioca", "precio": 2345, "cantidad": 25 },
-        { "nombre": "Maicena", "ID": "Maicena", "precio": 987, "cantidad": 18 },
-        { "nombre": "Salvado", "ID": "Salvado", "precio": 654, "cantidad": 10 },
-        { "nombre": "Manteca de cacao", "ID": "MantecaCacao", "precio": 3210, "cantidad": 30 },
+        { "nombre": "Vegetales", "ID": "Vegetales", "precio": 2345, "cantidad": 150 },
+        { "nombre": "Frutas", "ID": "Frutas", "precio": 567, "cantidad": 200 },
+        { "nombre": "Cereales", "ID": "Cereales", "precio": 1987, "cantidad": 120 },
+        { "nombre": "Semillas", "ID": "Semillas", "precio": 2435, "cantidad": 824 },
+        { "nombre": "Frutos secos", "ID": "FrutosSecos", "precio": 789, "cantidad": 59 },
+        { "nombre": "Fecula mandioca", "ID": "FeculaMandioca", "precio": 2345, "cantidad": 25 },
+        { "nombre": "Maicena", "ID": "Maicena", "precio": 987, "cantidad": 28 },
+        { "nombre": "Salvado", "ID": "Salvado", "precio": 654, "cantidad": 58 },
+        { "nombre": "Manteca cacao", "ID": "MantecaCacao", "precio": 3210, "cantidad": 30 },
         { "nombre": "Manteca de Almendras", "ID": "MantecaAlmendras", "precio": 4321, "cantidad": 22 },
         { "nombre": "Manteca de maní", "ID": "MantecaMani", "precio": 5432, "cantidad": 16 },
         { "nombre": "Manteca vegana", "ID": "MantecaVegana", "precio": 876, "cantidad": 18 },
@@ -19,18 +19,18 @@ const ingredientesJSON = {
         { "nombre": "Hierbas", "ID": "Hierbas", "precio": 6543, "cantidad": 25 },
         { "nombre": "Mayonesa vegana", "ID": "MayonesaVegana", "precio": 5678, "cantidad": 10 },
         { "nombre": "Levadura de cerveza", "ID": "LevaduraCerveza", "precio": 2109, "cantidad": 12 },
-        { "nombre": "Leche de arroz", "ID": "LecheArroz", "precio": 987, "cantidad": 8 },
-        { "nombre": "Leche de almendra", "ID": "LecheAlmendra" , "precio": 2345, "cantidad": 10 },
-        { "nombre": "Leche de avena", "ID": "LecheAvena", "precio": 2109, "cantidad": 15 },
-        { "nombre": "Leche de soja", "ID": "LecheSoja", "precio": 9876, "cantidad": 10 },
-        { "nombre": "Leche de cáñamo", "ID": "LecheCanamo", "precio": 4321, "cantidad": 5 },
-        { "nombre": "Leche de coco", "ID": "LecheCoco", "precio": 5432, "cantidad": 20 },
+        { "nombre": "Leche arroz", "ID": "LecheArroz", "precio": 987, "cantidad": 8 },
+        { "nombre": "Leche almendra", "ID": "LecheAlmendra" , "precio": 2345, "cantidad": 10 },
+        { "nombre": "Leche avena", "ID": "LecheAvena", "precio": 2109, "cantidad": 15 },
+        { "nombre": "Leche soja", "ID": "LecheSoja", "precio": 9876, "cantidad": 10 },
+        { "nombre": "Leche cañamo", "ID": "LecheCanamo", "precio": 4321, "cantidad": 5 },
+        { "nombre": "Leche coco", "ID": "LecheCoco", "precio": 5432, "cantidad": 20 },
       ]
     },
     {
       "categoria": "Ingredientes para simular el sabor de la proteína animal",
       "ingredientes": [
-        { "nombre": "Pimentón ahumado", "ID": "PimentonAhumado", "precio": 1234, "cantidad": 10 },
+        { "nombre": "Pimenton ahumado", "ID": "PimentonAhumado", "precio": 1234, "cantidad": 10 },
         { "nombre": "Alga nori", "ID": "AlgaNori", "precio": 2345, "cantidad": 15 },
         { "nombre": "Tofu", "ID": "Tofu", "precio": 567, "cantidad": 20 }
       ]
@@ -38,22 +38,22 @@ const ingredientesJSON = {
     {
       "categoria": "Repostería",
       "ingredientes": [
-        { "nombre": "Sustitutos del huevo", "ID": "SustitutosHuevo", "precio": 1987, "cantidad": 12 },
-        { "nombre": "Semillas de lino", "ID": "SemillasLino", "precio": 2435, "cantidad": 18 },
-        { "nombre": "Semillas de chía", "ID": "SemillasChia", "precio": 789, "cantidad": 20 },
-        { "nombre": "Aceite de coco", "ID": "AceiteCoco", "precio": 2345, "cantidad": 25 },
-        { "nombre": "Néctar de agave", "ID": "NectarAgave", "precio": 987, "cantidad": 15 },
-        { "nombre": "Sirope de arce", "ID": "SiropeArce", "precio": 3210, "cantidad": 20 },
+        { "nombre": "Sustitutos huevo", "ID": "SustitutosHuevo", "precio": 1987, "cantidad": 12 },
+        { "nombre": "Semillas lino", "ID": "SemillasLino", "precio": 2435, "cantidad": 185 },
+        { "nombre": "Semillas chía", "ID": "SemillasChia", "precio": 789, "cantidad": 205 },
+        { "nombre": "Aceite coco", "ID": "AceiteCoco", "precio": 2345, "cantidad": 25 },
+        { "nombre": "Néctar agave", "ID": "NectarAgave", "precio": 987, "cantidad": 15 },
+        { "nombre": "Sirope arce", "ID": "SiropeArce", "precio": 3210, "cantidad": 20 },
         { "nombre": "Melaza residual", "ID": "MelazaResidual", "precio": 4321, "cantidad": 25 },
-        { "nombre": "Masas y hojaldres", "ID": "MasasHojaldres", "precio": 5432, "cantidad": 10 }
+        { "nombre": "Masas hojaldres", "ID": "MasasHojaldres", "precio": 5432, "cantidad": 10 }
       ]
     },
     {
       "categoria": "Celiacos",
       "ingredientes": [
-        { "nombre": "Harina de arroz", "ID": "HarinaArroz", "precio": 2345, "cantidad": 20 },
+        { "nombre": "Harinae arroz", "ID": "HarinaArroz", "precio": 2345, "cantidad": 20 },
         { "nombre": "Trigo Sarraceno", "ID": "TrigoSarraceno", "precio": 567, "cantidad": 10 },
-        { "nombre": "Polvo de hornear", "ID": "PolvoHornear", "precio": 1987, "cantidad": 15 },
+        { "nombre": "Polvo hornear", "ID": "PolvoHornear", "precio": 1987, "cantidad": 15 },
         { "nombre": "Goma xantica", "ID": "GomaXantica", "precio": 2435, "cantidad": 12 },
         { "nombre": "Psyllium", "ID": "Psyllium", "precio": 789, "cantidad": 8 }
       ]
@@ -78,6 +78,19 @@ function actualizarInfoProductoEnDOM(productoID) {
   }
 }
 
+
+function actualizarBoton(ingredienteID) {
+  const boton = document.getElementById(`btn-${ingredienteID}`);
+  if (boton) {
+    const ingredienteEnCarrito = carritoDeCompras.filter((item) => item.nombre.toLowerCase().replace(/\s/g, '') === ingredienteID.toLowerCase().replace(/\s/g, ''));
+    if (ingredienteEnCarrito.length > 0) {
+      boton.textContent = `Agregado: ${ingredienteEnCarrito.length}`;
+    } else {
+      boton.textContent = "Agregar al carrito";
+    }
+  }
+}
+
 // Agregar ingredientes
 function agregarAlCarrito(ingredienteID) {
   for (const categoria of ingredientesJSON.categoriasDeIngredientes) {
@@ -87,6 +100,7 @@ function agregarAlCarrito(ingredienteID) {
           ingrediente.cantidad--;
           carritoDeCompras.push({ nombre: ingrediente.nombre, precio: ingrediente.precio });
           calcularTotalCarrito();
+          actualizarBoton(ingredienteID);
           actualizarInfoProductoEnDOM(ingredienteID); // Actualiza la cantidad en el DOM
           return `Se ha agregado ${ingrediente.nombre} al carrito.`;
         } else {
@@ -104,13 +118,19 @@ function agregarAlCarrito(ingredienteID) {
 
 // Quitar ingredientes
 function quitarDelCarrito(ingredienteID) {
-  const index = carritoDeCompras.findIndex(ingrediente => ingrediente.nombre === ingredienteID);
+  const index = carritoDeCompras.findIndex(ingrediente => {
+    // Convertir ambas cadenas y eliminar espacios en blanco
+    const nombreIngrediente = ingrediente.nombre.toLowerCase().replace(/\s/g, '');
+    const ingredienteIDLimpiado = ingredienteID.toLowerCase().replace(/\s/g, '');
+    return nombreIngrediente === ingredienteIDLimpiado;
+  });
 
   if (index !== -1) {
     const ingrediente = carritoDeCompras[index];
     incrementarCantidadDisponible(ingredienteID); // Usar el ID
     carritoDeCompras.splice(index, 1);
     calcularTotalCarrito();
+    actualizarBoton(ingredienteID);
     actualizarInfoProductoEnDOM(ingredienteID); // Actualizar la cantidad en el DOM
     return `Se ha quitado ${ingrediente.nombre} del carrito.`;
   } else {

@@ -3,14 +3,14 @@ let ingredientesJSON = {
     {
       "categoria": "Ingredientes Básicos Veganos",
       "ingredientes": [
-        { "nombre": "Vegetales", "ID": "Vegetales", "precio": 2345, "cantidad": 15 },
-        { "nombre": "Frutas", "ID": "Frutas", "precio": 567, "cantidad": 20 },
-        { "nombre": "Cereales", "ID": "Cereales", "precio": 1987, "cantidad": 12 },
-        { "nombre": "Semillas", "ID": "Semillas", "precio": 2435, "cantidad": 8 },
-        { "nombre": "Frutos secos", "ID": "FrutosSecos", "precio": 789, "cantidad": 5 },
+        { "nombre": "Vegetales", "ID": "Vegetales", "precio": 2345, "cantidad": 150 },
+        { "nombre": "Frutas", "ID": "Frutas", "precio": 567, "cantidad": 200 },
+        { "nombre": "Cereales", "ID": "Cereales", "precio": 1987, "cantidad": 120 },
+        { "nombre": "Semillas", "ID": "Semillas", "precio": 2435, "cantidad": 824 },
+        { "nombre": "Frutos secos", "ID": "FrutosSecos", "precio": 789, "cantidad": 59 },
         { "nombre": "Fécula de mandioca", "ID": "FeculaMandioca", "precio": 2345, "cantidad": 25 },
-        { "nombre": "Maicena", "ID": "Maicena", "precio": 987, "cantidad": 18 },
-        { "nombre": "Salvado", "ID": "Salvado", "precio": 654, "cantidad": 10 },
+        { "nombre": "Maicena", "ID": "Maicena", "precio": 987, "cantidad": 28 },
+        { "nombre": "Salvado", "ID": "Salvado", "precio": 654, "cantidad": 58 },
         { "nombre": "Manteca de cacao", "ID": "MantecaCacao", "precio": 3210, "cantidad": 30 },
         { "nombre": "Manteca de Almendras", "ID": "MantecaAlmendras", "precio": 4321, "cantidad": 22 },
         { "nombre": "Manteca de maní", "ID": "MantecaMani", "precio": 5432, "cantidad": 16 },
@@ -39,8 +39,8 @@ let ingredientesJSON = {
       "categoria": "Repostería",
       "ingredientes": [
         { "nombre": "Sustitutos del huevo", "ID": "SustitutosHuevo", "precio": 1987, "cantidad": 12 },
-        { "nombre": "Semillas de lino", "ID": "SemillasLino", "precio": 2435, "cantidad": 18 },
-        { "nombre": "Semillas de chía", "ID": "SemillasChia", "precio": 789, "cantidad": 20 },
+        { "nombre": "Semillas de lino", "ID": "SemillasLino", "precio": 2435, "cantidad": 185 },
+        { "nombre": "Semillas de chía", "ID": "SemillasChia", "precio": 789, "cantidad": 205 },
         { "nombre": "Aceite de coco", "ID": "AceiteCoco", "precio": 2345, "cantidad": 25 },
         { "nombre": "Néctar de agave", "ID": "NectarAgave", "precio": 987, "cantidad": 15 },
         { "nombre": "Sirope de arce", "ID": "SiropeArce", "precio": 3210, "cantidad": 20 },
@@ -82,3 +82,19 @@ function cargarPreciosYCantidad() {
 
 // Llamarla al inicio
 window.addEventListener('load', cargarPreciosYCantidad);
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+   // Obtengo todos los elementos con la clase "producto"
+  const elementosProducto = document.querySelectorAll('.producto');
+
+  // Recorro cada elemento y agrega el ID
+  elementosProducto.forEach(elemento => {
+    const idContenedor = elemento.id;
+    const botonAgregarCarrito = elemento.querySelector('button[onclick="agregarAlCarrito(\'' + idContenedor + '\')"]');
+    botonAgregarCarrito.id = 'btn-' + idContenedor;
+  });
+});
