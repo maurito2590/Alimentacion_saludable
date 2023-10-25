@@ -412,11 +412,11 @@ section {
   margin-bottom: 10px;
   transition: color 0.3s;
 }
-/* Estilos para el hover */
+
 .tit_hist:hover {
   color: #0ec21d;
 }
-
+/*Footer*/
 .pie-pagina {
   background-color: #f7f7f7;
   padding: 40px 0;
@@ -575,11 +575,11 @@ ul {
 }
 
 .my-form *:required {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg);  
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg'); 
 }
 
 .my-form select {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/down.svg);
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/down.svg');
 }
 
 .my-form *:disabled {
@@ -592,8 +592,7 @@ ul {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .my-form .required-msg {
   display: none;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg)
-    no-repeat center left / 15px 15px;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg') no-repeat center left / 15px 15px;
   padding-left: 20px;
 }
 
@@ -680,7 +679,8 @@ ul {
 
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-footer {
+
+/* footer {
   font-size: 1rem;
   text-align: right;
   backface-visibility: hidden;
@@ -693,7 +693,7 @@ footer a {
 footer span {
   color: var(--red);
 }
-
+ */
 
 /*Media Queries*/
 
