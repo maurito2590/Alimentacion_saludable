@@ -39,9 +39,11 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
+
 #boton-mas {
-  display:hidden;
+  display: hidden;
 }
+
 .redes a,
 .boton-mas label {
   display: block;
@@ -57,35 +59,43 @@ body {
   transition: all 500ms ease;
   font-size: 20px;
 }
+
 .redes a:hover {
   background: #fff;
   color: #129f05;
 }
+
 .redes a {
   margin-bottom: -15px;
   opacity: 0;
   visibility: hidden;
 }
-#boton-mas:checked ~ .redes a {
+
+#boton-mas:checked~.redes a {
   margin-bottom: 10px;
   opacity: 1;
   visibility: visible;
 }
+
 .boton-mas label {
   cursor: pointer;
   background: #129f05;
   font-size: 23px;
 }
-#boton-mas:checked ~ .boton-mas label {
+
+#boton-mas:checked~.boton-mas label {
   transform: rotate(135deg);
   font-size: 25px;
 }
+
 section {
   padding: 2rem;
 }
+
 #btn-mas {
   display: none;
 }
+
 .btn {
   display: inline-block;
   padding: 1.5rem 1rem;
@@ -118,17 +128,21 @@ section {
   background: #fff;
   box-shadow: var(--box-shadow);
 }
+
 .header .logo {
   font-size: 2.5rem;
   font-weight: bold;
   color: green;
 }
+
 .header .logo:hover {
   color: rgb(97, 238, 15);
 }
+
 .header .logo i {
   color: var(--green);
 }
+
 .header .navbar a {
   font-size: 1.7rem;
   margin: 0 1rem;
@@ -152,10 +166,12 @@ section {
   text-align: center;
   cursor: pointer;
 }
+
 .header .icons div:hover {
   background: var(--green);
   color: white;
 }
+
 #menu-btn {
   display: none;
 }
@@ -186,9 +202,9 @@ section {
 }
 
 .c-img {
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7); 
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
 }
 
 .header .search-form label {
@@ -201,6 +217,7 @@ section {
 .header .search-form label:hover {
   color: var(--green);
 }
+
 .header .login-form {
   border: 0px solid;
   position: absolute;
@@ -218,6 +235,7 @@ section {
   right: 2rem;
   transition: 0.4s linear;
 }
+
 .header .login-form h3 {
   font-size: 2.5rem;
   text-transform: none;
@@ -235,11 +253,13 @@ section {
   color: var(--black);
   text-transform: none;
 }
+
 .header .login-form p {
   font-size: 1.4rem;
   padding: 0.5rem 0;
   color: var(--light-color);
 }
+
 .header .login-form p a {
   color: var(--green);
   text-decoration: underline;
@@ -298,12 +318,14 @@ section {
 .servicios .box-conteiner .box:hover {
   box-shadow: 1px 1px 10px 4px var(--green);
 }
+
 .servicios .box-conteiner .box img {
   margin: auto;
   width: 100%;
   object-fit: cover;
   max-width: 16rem;
 }
+
 .servicios .box-conteiner .box h3 {
   font-size: 2.5rem;
   line-height: 1.8;
@@ -319,6 +341,7 @@ section {
   text-align: center;
   margin: 1.5rem;
 }
+
 .servicio-encabezado {
   text-align: center;
   padding: 2rem 0;
@@ -327,6 +350,7 @@ section {
   color: var(--black);
   cursor: pointer;
 }
+
 .servicio-encabezado:hover {
   color: var(--green);
 }
@@ -343,6 +367,7 @@ section {
   text-align: left;
   padding: auto;
 }
+
 .tit_hist {
   text-align: center;
   font-weight: bold;
@@ -351,7 +376,7 @@ section {
   margin-bottom: 10px;
   transition: color 0.3s;
 }
-/* Estilos para el hover */
+
 .tit_hist:hover {
   color: #0ec21d;
 }
@@ -399,9 +424,11 @@ section {
 .columna ul li a:hover {
   color: #2c8d20;
 }
+
 .columna img {
   max-width: 70px;
 }
+
 .derechos {
   text-align: center;
   margin-top: 20px;
@@ -411,15 +438,222 @@ section {
   color: #666;
 }
 
+/*Estilo de contacto */
+a {
+  color: inherit;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+select {
+  appearance: none;
+}
+
+textarea {
+  resize: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.contacto {
+  font: 18px/1.5 "Open Sans", sans-serif;
+  background: var(--bodyColor);
+  color: var(--white);
+  margin: 1.5rem 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+/* elementos del formulario 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.my-form h1 {
+  margin-bottom: 2rem;
+}
+
+
+.my-form li,
+.my-form .grid>*:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.my-form select,
+.my-form input,
+.my-form textarea,
+.my-form button {
+  width: 100%;
+  line-height: 1.5;
+  padding: 15px 10px;
+  border: 1px solid var(--borderFormEls);
+  color: var(--green);
+  background: var(--bgFormEls);
+  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
+    transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.my-form textarea {
+  height: 170px;
+}
+
+.my-form ::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus,
+.my-form button:enabled:hover,
+.my-form button:focus,
+.my-form input[type="checkbox"]:focus+label {
+  background: var(--bgFormElsFocus);
+}
+
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus {
+  transform: scale(1.02);
+}
+
+.my-form *:required,
+.my-form select {
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+  background-size: 15px 15px;
+}
+
+.my-form *:required {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg);
+}
+
+.my-form select {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/down.svg);
+}
+
+.my-form *:disabled {
+  cursor: default;
+  filter: blur(2px);
+}
+
+
+/* estilo  BTNS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.my-form .required-msg {
+  display: none;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg) no-repeat center left / 15px 15px;
+  padding-left: 20px;
+}
+
+.my-form .btn-grid {
+  position: relative;
+  overflow: hidden;
+  transition: filter 0.2s;
+}
+
+.my-form button {
+  font-weight: bold;
+}
+
+.my-form button>* {
+  display: inline-block;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.my-form button .back {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-110%, -50%);
+}
+
+.my-form button:enabled:hover .back,
+.my-form button:focus .back {
+  transform: translate(-50%, -50%);
+}
+
+.my-form button:enabled:hover .front,
+.my-form button:focus .front {
+  transform: translateX(110%);
+}
+
+
+/* estilo del  CHECKBOX
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.my-form input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.my-form input[type="checkbox"]+label {
+  position: relative;
+  display: inline-block;
+  padding-left: 2rem;
+  transition: trasnform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+
+}
+
+.my-form input[type="checkbox"]:focus+label {
+  background: var(--bgFormElsFocus);
+}
+
+.my-form input[type="checkbox"]+label::before,
+.my-form input[type="checkbox"]+label::after {
+  content: '';
+  position: absolute;
+}
+
+.my-form input[type="checkbox"]+label::before {
+  left: 0;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--black);
+}
+
+.my-form input[type="checkbox"]:checked+label::before {
+  background: var(--red);
+}
+
+.my-form input[type="checkbox"]:checked+label::after {
+  left: 7px;
+  top: 7px;
+  width: 6px;
+  height: 14px;
+  border-bottom: 2px solid var(--black);
+  border-right: 2px solid var(--black);
+  transform: rotate(45deg);
+}
+
+
 /*Media Queries*/
 
 @media (max-width: 991px) {
   html {
     font-size: 55%;
   }
+
   .header {
     padding: 2rem;
   }
+
   section {
     padding: 2rem;
   }
@@ -433,9 +667,11 @@ section {
   #menu-btn {
     display: inline-block;
   }
+
   .header .search-form {
     width: 70%;
   }
+
   .header .navbar {
     position: absolute;
     top: 110%;
@@ -445,53 +681,58 @@ section {
     border-radius: 0.5rem;
     background: #fff;
   }
+
   .header .navbar a {
     font-size: 1.5rem;
     margin: 1.5rem 2rem;
     display: block;
   }
+
   .inicio {
     display: cover;
     padding-top: 10rem;
     padding-bottom: 5rem;
   }
+
   .servicios .box-conteiner .box {
     padding: 1rem;
   }
-.nav__input:checked + .nav__menu {
+
+  .nav__input:checked+.nav__menu {
     clip-path: circle(100% at center);
-}
+  }
 
-.carousel-item {
-    text-align: center; 
-} 
+  .carousel-item {
+    text-align: center;
+  }
 
-.c-img {
-    max-width: 100%; 
-    height: auto; 
-}
+  .c-img {
+    max-width: 100%;
+    height: auto;
+  }
 
-.carousel-caption {
+  .carousel-caption {
     position: absolute;
-    top: 50%; 
+    top: 50%;
     left: 0;
     right: 0;
     transform: translateY(-50%);
     text-align: center;
-}
-.pie-pagina .grupo-1 {
+  }
+
+  .pie-pagina .grupo-1 {
     width: 90%;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     padding: 35px 0;
-}
+  }
 
-.icons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-self: flex-end;
-  margin-right: 50px;
-}
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-self: flex-end;
+    margin-right: 50px;
+  }
 
 
 }
