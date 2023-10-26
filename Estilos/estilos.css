@@ -185,10 +185,22 @@ section {
   transition: 0.4s linear;
 }
 
+/*<<<<<<< Updated upstream*/
+.header .search-form input {
+  height: 100%;
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 1.6rem;
+  color: var(--black);
+  padding: 0 1.5rem;
+}
+/*=======*/
 .c-img {
     height: 100%;
     object-fit: cover;
     filter: brightness(0.7); 
+/*>>>>>>> Stashed changes*/
 }
 
 .header .search-form label {
@@ -458,6 +470,7 @@ section {
   .servicios .box-conteiner .box {
     padding: 1rem;
   }
+/*=======*/
 .nav__input:checked + .nav__menu {
     clip-path: circle(100% at center);
 }
@@ -484,27 +497,6 @@ section {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     padding: 35px 0;
+/*>>>>>>> Stashed changes*/
 }
-
-.logo {
-  display: none;
-}
-
-.icons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-self: flex-end;
-}
-
-.carrito {
-  margin-right: 15%;
-}
-
-}
-
-
-.consumo__api {
-  text-align: center;
-  font-size: 15px;
-  margin-top: 10px;
 }
