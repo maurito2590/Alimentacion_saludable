@@ -1,0 +1,346 @@
+:root{
+    --verde:#00A149;
+    --blanco:#fff;
+    --rojo:#881014;
+    --oscuro:#000;
+    --titulos:'Arima Madurai',cursive;
+    --parrafos:'Mulish', sans-serif;
+}
+html{
+    box-sizing: border-box;
+    /*1rem = 10px*/
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    overflow-x: hidden;
+}
+
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+/*globales*/
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 95%;
+}
+h1,h2{
+    font-family: var(--titulos);
+}
+h3, p, a{
+    font-family: var(--parrafos);
+}
+
+img{
+    max-width: 100%;
+}
+
+.btn-2{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 1rem 5rem;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+@media(min-width: 768px) {
+    .btn-2{
+        font-size: 2.2rem;
+    }
+}
+.bordes{
+    border: 3px solid var(--blanco);
+}
+@media(min-width: 768px) {
+    .bordes{
+        border: 4px solid var(--blanco);
+    }
+}
+
+.bordes:hover{
+    color: var(--verde);
+    background-color: var(--blanco);
+}
+.btn-rojo{
+    background-color: var(--rojo);
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.btn-verde{
+    background-color: var(--verde);
+    border: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-family: var(--parrafos);
+}
+.btn-verde:hover{
+    background-color: var(--rojo);
+}
+/*video*/
+.contenido-video{
+    position: relative;
+}
+
+.contenido-video::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+}
+
+.texto-video{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.texto-video h2{
+    color: var(--blanco);
+    font-size: 4rem;
+}
+.texto-video p{
+    color: var(--blanco);
+    font-size: 2rem;
+}
+@media(min-width: 768px) {
+    .texto-video h2{
+        font-size: 8rem;
+    }
+}
+
+video{
+    width: 100%;
+    height: 100%;
+}
+
+  
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    
+    background-color: var(--blanco);
+}
+
+.section-title{
+   flex:0 0 100%;
+   max-width: 100%;
+   margin-bottom: 60px;
+}
+.section-title h1{
+    text-align: center;
+    font-size: 5rem;
+}
+.section-title p{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.recetas-container{
+    max-width: 1170px;
+    margin: auto;
+    background: var(--blanco);
+}
+
+
+.recetas .receta-items{
+   flex:0 0 100%;
+   max-width: 100%;
+}
+.recetas .receta-items .item{
+   flex:0 0 33.33%;
+   max-width: 33.33%;
+   padding: 15px;
+}
+
+.recetas .receta-items .item-inner{
+   border:1px solid #dddddd;
+   padding: 30px;
+}
+.recetas .receta-items .read-more-cont{
+   display: none;
+}
+.recetas .receta-items .item-inner h3{
+   font-size: 20px;
+   color:#000000;
+   margin-bottom: 30px;
+   position: relative;
+  
+}
+.recetas .receta-items .item-inner h3::before{
+ content: '';
+ height: 1px;
+ width: 80px;
+ background-color: #000000;
+ position: absolute;
+ left:0;
+ bottom:-10px;
+}
+
+.recetas .receta-items .item-inner p{
+   color:var(--blanco);
+   font-size: 16px;
+   margin:0 0 30px;
+}
+.recetas .receta-items .item-inner .btn-recetas{
+   font-size: 16px;
+   background-color: transparent;
+   border:1px solid var(--verde);
+   color:var(--verde);
+   padding: 8px 15px;
+   cursor: pointer;
+}
+
+.popup-box{
+   position: fixed;
+   height: 100%;
+   width: 100%;
+   left: 0;
+   top:0;
+   background-color: rgba(0,0,0,0.5);
+   z-index: 500;
+   visibility: hidden;
+   opacity:0;
+   transition: all 0.5s ease-in-out;
+}
+.popup-box.open{
+    visibility: visible;
+    opacity:1;	
+}
+.popup-box .popup-content{
+   background-color: #ffffff;
+   width: 800px;
+   position: absolute;
+   left: 50%;
+   top:50%;
+   transform: translate(-50%,-50%);
+   border-radius: 8px;
+}
+
+.popup-box .popup-header{
+   padding: 15px 40px 15px 15px;
+   border-bottom: 1px solid var(--oscuro);
+}
+.popup-box .popup-header h3{
+   margin:0;
+   color:var(--oscuro);
+   font-size: 20px;
+}
+.popup-box .popup-header .popup-close-icon{
+   position: absolute;
+   height: 30px;
+   width: 30px;
+   text-align: center;
+   color: #555555;
+   font-size: 28px;
+   line-height: 30px;
+   right: 5px;
+   top: 5px;
+   cursor: pointer;
+}
+.popup-box .popup-body{
+   padding: 15px;
+   max-height: 300px;
+   overflow-y: auto;
+}
+.popup-box .popup-body img{
+   width: 100%;
+   display: block;
+   margin-top: 15px;
+}
+.popup-box .popup-body p{
+   font-size: 16px;
+   color:var(--oscuro);
+   margin:0 0 15px;
+}
+.popup-box .popup-footer{
+   padding: 15px;
+   border-top:1px solid #dddddd;
+   text-align: right;
+}
+.popup-box .popup-footer .btn-recetas{
+   padding: 8px 15px;
+   border:1px solid var(--verde);
+   color: var(--blanco);
+   font-size: 16px;
+   background-color: var(--verde);
+   cursor: pointer;
+   border-radius: 4px;
+}
+.popup-box .popup-footer .btn-recetas:focus{
+   outline: none;
+}
+
+
+/*responsive*/
+
+@media(max-width: 767px){
+   .recetas .receta-items .item{
+     flex:0 0 100%;
+     max-width: 100%;
+  }
+  .popup-box .popup-content{
+       width: calc(100% - 30px);
+  }
+} 
+
+.separador{
+    background-image: url('/media/desayuno.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: center;
+    z-index: 2;
+}
+.separador::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: -1;
+}
+
+.contenido-separador{
+    padding: 5rem;
+}
+
+.contenido-separador h2{
+    font-size: 4rem;
+    color: var(--blanco);
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .contenido-separador h2{
+        text-align: left;
+        font-size: 5rem;
+        color: var(--blanco);
+    }
+}
+.contenido-separador p{
+    color: var(--blanco);
+    font-size: 3rem;
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .contenido-separador p{
+        text-align: left;
+    }
+}
+
+
