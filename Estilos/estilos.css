@@ -497,6 +497,10 @@ section {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     padding: 35px 0;
-/*>>>>>>> Stashed changes*/
 }
+
+}
+
+.consumo__api {
+  text-align: center;
 }

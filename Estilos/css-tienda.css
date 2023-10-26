@@ -87,3 +87,80 @@
     object-fit: fill ;
     z-index: -9;
 }
+
+@media (max-width: 768px) {
+    body {
+      width: 100%;
+    }
+  
+    #menu-btn {
+      display: inline-block;
+    }
+    .header .search-form {
+      width: 70%;
+    }
+    .header .navbar {
+      position: absolute;
+      top: 110%;
+      right: -110%;
+      width: 30rem;
+      box-shadow: var(--box-shadow);
+      border-radius: 0.5rem;
+      background: #fff;
+    }
+    .header .navbar a {
+      font-size: 1.5rem;
+      margin: 1.5rem 2rem;
+      display: block;
+    }
+    .inicio {
+      display: cover;
+      padding-top: 10rem;
+      padding-bottom: 5rem;
+    }
+    .servicios .box-conteiner .box {
+      padding: 1rem;
+    }
+  /*=======*/
+  .nav__input:checked + .nav__menu {
+      clip-path: circle(100% at center);
+  }
+  
+  .carousel-item {
+      text-align: center; 
+  } 
+  
+  .c-img {
+      max-width: 100%; 
+      height: auto; 
+  }
+  
+  .carousel-caption {
+      position: absolute;
+      top: 50%; 
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      text-align: center;
+  }
+  .pie-pagina .grupo-1 {
+      width: 90%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+      padding: 35px 0;
+  }
+  
+  .logo {
+    display: none;
+  }
+  
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .carrito {
+    margin-right: 75px;
+  }
+  
+  }
