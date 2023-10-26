@@ -1,5 +1,5 @@
 var ip = ''; // Deja en blanco para buscar la dirección IP actual
-var fields = 'country,city,flag.emoji,timezone.current_time'; // Campos que deseas obtener
+var fields = 'country,city,flag.emoji,timezone.current_time'; // Campos a obtener
 
 function fetchData() {
     var XMLHttp = new XMLHttpRequest();
@@ -10,14 +10,14 @@ function fetchData() {
             console.log("City:", ipwhois.city);
             console.log("Flag Emoji:", ipwhois.flag.emoji);
 
-            // Obtiene la cadena de tiempo de la respuesta
+            // Obtengo la cadena de tiempo de la respuesta
             var dateTimeString = ipwhois.timezone.current_time;
 
-            // Divide la cadena de tiempo en partes (fecha, hora y zona horaria)
+            // Divido la cadena de tiempo en partes
             var parts = dateTimeString.split('T');
             var timePart = parts[1].split('-')[0];
 
-            // Actualiza el contenido de los elementos HTML
+            // Actualizo el contenido de los elementos HTML
             document.getElementById("country").textContent = ipwhois.country;
             document.getElementById("city").textContent = ipwhois.city;
             document.getElementById("flag").textContent = ipwhois.flag.emoji;
@@ -25,7 +25,7 @@ function fetchData() {
         }
     };
 
-    // Construye la URL con los parámetros 'output' y 'fields'
+    // Salida
     var url = 'https://ipwho.is/' + ip + '?output=json&fields=' + fields;
     XMLHttp.open('GET', url, true);
     XMLHttp.send();
@@ -34,5 +34,5 @@ function fetchData() {
 // Realiza la primera solicitud
 fetchData();
 
-// Establece la actualización cada 30 segundos
+// Actualizo cada 30 segundos
 setInterval(fetchData, 30000);
