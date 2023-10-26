@@ -486,19 +486,13 @@ section {
     padding: 35px 0;
 }
 
-.logo {
-  display: none;
-}
-
 .icons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-self: flex-end;
+  margin-right: 50px;
 }
 
-.carrito {
-  margin-right: 15%;
-}
 
 }
 
