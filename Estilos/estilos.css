@@ -41,7 +41,8 @@ body {
 }
 
 #boton-mas {
-  display: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .redes a,
@@ -355,6 +356,41 @@ section {
   color: var(--green);
 }
 
+.pagos .box-conteiner .box:hover {
+  box-shadow: 1px 1px 10px 4px var(--green);
+}
+.pagos .box-conteiner .box img {
+  margin: auto;
+  width: 100%;
+  object-fit: cover;
+  max-width: 16rem;
+}
+.pagos .box-conteiner .box h3 {
+  font-size: 2.5rem;
+  line-height: 1.8;
+  color: var(--black);
+  margin: 1.5rem;
+}
+
+.pagos .box-conteiner .box p {
+  font-size: 2.5rem;
+  line-height: 1.8;
+  color: var(--light-color);
+  padding-bottom: 1rem 0;
+  text-align: center;
+  margin: 1.5rem;
+}
+.pagos-encabezado {
+  text-align: center;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+  font-size: 3rem;
+  color: var(--black);
+  cursor: pointer;
+}
+.pagos-encabezado:hover {
+  color: var(--green);
+}
 .nosotros {
   padding: 30px;
   text-align: center;
@@ -484,6 +520,12 @@ ul {
 
 /* elementos del formulario 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.my-form {
+  border: 1px solid var(--box-shadow);
+  border-radius: 5px; 
+  box-shadow: 3px 3px 5px #888; 
+  padding: 20px;
+}
 .my-form h1 {
   margin-bottom: 2rem;
 }
