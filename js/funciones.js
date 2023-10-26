@@ -54,7 +54,6 @@ const ingredientesJSON = {
         { "nombre": "Harinae arroz", "ID": "HarinaArroz", "precio": 2345, "cantidad": 20 },
         { "nombre": "Trigo Sarraceno", "ID": "TrigoSarraceno", "precio": 567, "cantidad": 10 },
         { "nombre": "Polvo hornear", "ID": "PolvoHornear", "precio": 1987, "cantidad": 15 },
-        { "nombre": "Goma xantica", "ID": "GomaXantica", "precio": 2435, "cantidad": 12 },
         { "nombre": "Psyllium", "ID": "Psyllium", "precio": 789, "cantidad": 8 }
       ]
     }

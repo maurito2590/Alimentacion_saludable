@@ -54,7 +54,6 @@ let ingredientesJSON = {
         { "nombre": "Harina de arroz", "ID": "HarinaArroz", "precio": 2345, "cantidad": 20 },
         { "nombre": "Trigo Sarraceno", "ID": "TrigoSarraceno", "precio": 567, "cantidad": 10 },
         { "nombre": "Polvo de hornear", "ID": "PolvoHornear", "precio": 1987, "cantidad": 15 },
-        { "nombre": "Goma xantica", "ID": "GomaXantica", "precio": 2435, "cantidad": 12 },
         { "nombre": "Psyllium", "ID": "Psyllium", "precio": 789, "cantidad": 8 }
       ]
     }
@@ -88,13 +87,27 @@ window.addEventListener('load', cargarPreciosYCantidad);
 
 
 document.addEventListener('DOMContentLoaded', function () {
-   // Obtengo todos los elementos con la clase "producto"
+  // Obtengo todos los elementos con la clase "producto"
   const elementosProducto = document.querySelectorAll('.producto');
 
-  // Recorro cada elemento y agrega el ID
+  // Recorro cada elemento y agrega el ID y la clase a la imagen
   elementosProducto.forEach(elemento => {
     const idContenedor = elemento.id;
+
+    // Asigno el ID y agrego la clase
     const botonAgregarCarrito = elemento.querySelector('button[onclick="agregarAlCarrito(\'' + idContenedor + '\')"]');
     botonAgregarCarrito.id = 'btn-' + idContenedor;
+    botonAgregarCarrito.classList.add('agregar');
+
+    // Agrega la clase "quitar"
+    const botonQuitarCarrito = elemento.querySelector('button[onclick="quitarDelCarrito(\'' + idContenedor + '\')"]');
+    botonQuitarCarrito.classList.add('quitar');
+
+    // Agrega la clase "imagen__producto"
+    const imagenesProducto = elemento.querySelectorAll('img');
+    imagenesProducto.forEach(imagen => {
+      imagen.classList.add('imagen__producto');
+    });
   });
 });
+

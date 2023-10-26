@@ -446,8 +446,8 @@ section {
     background: #fff;
   }
   .header .navbar a {
-    font-size: 2rem;
-    margin: 2rem 2.5rem;
+    font-size: 1.5rem;
+    margin: 1.5rem 2rem;
     display: block;
   }
   .inicio {
@@ -485,4 +485,19 @@ section {
     grid-gap: 30px;
     padding: 35px 0;
 }
+
+.logo {
+  display: none;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-self: flex-end;
+}
+
+.carrito {
+  margin-right: 15%;
+}
+
 }
