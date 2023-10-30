@@ -14,7 +14,7 @@
     <nav class="navbar">
         <a href="./index.html"> Inicio </a>
         <a href="./paginas/productos.html"> Productos </a>
-        <a href="./paginas/recetas.html"> Recetas </a>
+        <a href="./paginas/recetas2.html"> Recetas </a>
         <a href="./paginas/contacto.html"> Contacto </a>
     </nav>
     <div class="icons">
@@ -39,23 +39,23 @@
     </form>
     </header> 
     <main>
-    <div class="cont">
-        <input type="checkbox" id="btn-mas">
+    <!-- <div class="cont">
+        <input type="checkbox" id="boton-mas">
         <div class="redes">
             <a href="#" class="fa-brands fa-facebook"></a>
             <a href="#" class="fa-brands fa-youtube"></a>
             <a href="#" class="fa-brands fa-whatsapp"></a>
             <a href="#" class="fa-brands fa-pinterest"></a>
         </div>
-        <div class="btn-mas">
-            <label for="btn-mas" class="fa fa-plus"></label>
-        </div>
+        <div class="boton-mas">
+            <label for="boton-mas" class="fa fa-plus"></label>
+        </div> -->
     </div>    
     <section class="inicio" id="inicio">
             <div class="content">
                 <h3>Tenemos productos naturales de calidad premium a precios accesibles</h3>
                 <p>Podras aprender recetas que permitiran mejorar la calidad de tu salud </p>
-                <a href="/paginas/recetas.html" class="btn"> Ver recetas </a>
+                <a href="/paginas/recetas2.html" class="btn"> Ver recetas </a>
             </div>        
     </section>
     <section class="servicios" id="servicios">
@@ -158,8 +158,13 @@
         <div class="derechos">
             <small>&copy; 2023 <b>CMF Group</b> - Todos los Derechos Reservados.</small>
         </div>
+        <div id="ipInfo" class="consumo__api">
+            <p>Ud está en <span id="city"></span>, <span id="country"></span>, <span id="flag"></span>, <span
+                    id="timezone"></span> horas</p>
+        </div>
     </footer>
     <script src="./js/main.js"></script>
+    <script src="/js/api.js"></script>
 </body>
 
 </html>

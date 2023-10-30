@@ -17,7 +17,6 @@ document.querySelector('#login-btn').onclick = () =>
 
 }
 
-
 let navbar = document.querySelector('.navbar');
 
 document.querySelector('#menu-btn').onclick = () =>
@@ -36,26 +35,28 @@ window.onscroll = () =>
 let slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+const checkbox = document.querySelector('.my-form input[type="checkbox"]');
+const btns = document.querySelectorAll(".my-form button");
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+checkbox.addEventListener("change", function() {
+  const checked = this.checked;
+  for (const btn of btns) {
+    checked ? (btn.disabled = false) : (btn.disabled = true);
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+});
+function validateForm() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const tel = document.getElementById("tel").value;
+  const sede = document.querySelector(".select").value;
+  const consult = document.getElementById("consult").value;
+  const warnings = document.getElementById("warnings");
+if (name === "" || email === "" || tel === "" || sede === "Elige tu sede" || consult === "") {
+      warnings.innerHTML = "Por favor, complete todos los campos";
+      return false;
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+

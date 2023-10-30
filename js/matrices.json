@@ -1,0 +1,70 @@
+{
+    "categoriasDeIngredientes": [
+      {
+        "categoria": "Ingredientes Básicos Veganos",
+        "ingredientes": [
+          { "nombre": "Legumbres", "precio": 1234, "cantidad": 10 },
+          { "nombre": "Vegetales", "precio": 2345, "cantidad": 15 },
+          { "nombre": "Frutas", "precio": 567, "cantidad": 20 },
+          { "nombre": "Cereales", "precio": 1987, "cantidad": 12 },
+          { "nombre": "Semillas", "precio": 2435, "cantidad": 8 },
+          { "nombre": "Frutos secos", "precio": 789, "cantidad": 5 },
+          { "nombre": "Fécula de mandioca", "precio": 2345, "cantidad": 25 },
+          { "nombre": "Maicena", "precio": 987, "cantidad": 18 },
+          { "nombre": "Salvado", "precio": 654, "cantidad": 10 },
+          { "nombre": "Manteca de cacao", "precio": 3210, "cantidad": 30 },
+          { "nombre": "Manteca de Almendras", "precio": 4321, "cantidad": 22 },
+          { "nombre": "Manteca de maní", "precio": 5432, "cantidad": 16 },
+          { "nombre": "Manteca vegana", "precio": 876, "cantidad": 18 },
+          { "nombre": "Goma xantana", "precio": 9876, "cantidad": 30 },
+          { "nombre": "Hierbas", "precio": 6543, "cantidad": 25 },
+          { "nombre": "Mayonesa vegana", "precio": 5678, "cantidad": 10 },
+          { "nombre": "Levadura de cerveza", "precio": 2109, "cantidad": 12 },
+          {
+            "nombre": "Leche vegana",
+            "variantes": [
+              { "nombre": "de arroz", "precio": 987, "cantidad": 8 },
+              { "nombre": "de almendra", "precio": 2345, "cantidad": 10 },
+              { "nombre": "de avena", "precio": 2109, "cantidad": 15 },
+              { "nombre": "de soja", "precio": 9876, "cantidad": 10 },
+              { "nombre": "de cáñamo", "precio": 4321, "cantidad": 5 },
+              { "nombre": "de coco", "precio": 5432, "cantidad": 20 }
+            ]
+          }
+        ]
+      },
+      {
+        "categoria": "Ingredientes para simular el sabor de la proteína animal",
+        "ingredientes": [
+          { "nombre": "Pimentón ahumado", "precio": 1234, "cantidad": 10 },
+          { "nombre": "Alga nori", "precio": 2345, "cantidad": 15 },
+          { "nombre": "Tofu", "precio": 567, "cantidad": 20 }
+        ]
+      },
+      {
+        "categoria": "Repostería",
+        "ingredientes": [
+          { "nombre": "Sustitutos del huevo", "precio": 1987, "cantidad": 12 },
+          { "nombre": "Semillas de lino", "precio": 2435, "cantidad": 18 },
+          { "nombre": "Semillas de chía", "precio": 789, "cantidad": 20 },
+          { "nombre": "Aceite de coco", "precio": 2345, "cantidad": 25 },
+          { "nombre": "Néctar de agave", "precio": 987, "cantidad": 15 },
+          { "nombre": "Sirope de arce", "precio": 3210, "cantidad": 20 },
+          { "nombre": "Melaza residual", "precio": 4321, "cantidad": 25 },
+          { "nombre": "Masas y hojaldres", "precio": 5432, "cantidad": 10 }
+        ]
+      },
+      {
+        "categoria": "Celiacos",
+        "ingredientes": [
+          { "nombre": "Fécula de mandioca", "precio": 1234, "cantidad": 15 },
+          { "nombre": "Harina de arroz", "precio": 2345, "cantidad": 20 },
+          { "nombre": "Trigo Sarraceno", "precio": 567, "cantidad": 10 },
+          { "nombre": "Polvo de hornear", "precio": 1987, "cantidad": 15 },
+          { "nombre": "Goma xantica", "precio": 2435, "cantidad": 12 },
+          { "nombre": "Psyllium", "precio": 789, "cantidad": 8 }
+        ]
+      }
+    ]
+  }
+  
