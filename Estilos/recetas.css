@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@700&family=Mulish:wght@400;700&display=swap');
+
 :root{
     --verde:#00A149;
     --blanco:#fff;
     --rojo:#881014;
     --oscuro:#000;
-    --titulos:'Arima Madurai',cursive;
+    --titulos:'Arima',sans-serif;
     --parrafos:'Mulish', sans-serif;
+    --green: rgb(50, 138, 12);
+    --black: #074705;
+    --light-color: #666;
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0.1);
+    --border: 2rem solid rgba(0, 0, 0.1);
+    --outline: 0.1rem solid rgba(0, 0, 0.1);
 }
 html{
     box-sizing: border-box;
@@ -18,8 +26,13 @@ body{
 
 *,*::after, *::before{
     box-sizing: inherit;
+   
+}
+img {
+    max-width: 100%;
 }
 /*globales*/
+
 .contenedor{
     max-width: 120rem;
     margin: 0 auto;
@@ -30,12 +43,8 @@ h1,h2{
 }
 h3, p, a{
     font-family: var(--parrafos);
+    text-decoration: none;
 }
-
-img{
-    max-width: 100%;
-}
-
 .btn-2{
     text-decoration: none;
     color: var(--blanco);
@@ -72,7 +81,7 @@ img{
     margin-bottom: 2rem;
 }
 .btn-verde{
-    background-color: var(--verde);
+    background-color: var(--green);
     border: none;
     display: inline-block;
     margin-bottom: 2rem;
@@ -81,12 +90,176 @@ img{
 .btn-verde:hover{
     background-color: var(--rojo);
 }
+
+/*Header*/
+.btn {
+    display: inline-block;
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    border: 1px solid var(--black);
+    border-radius: 0.5rem;
+    color: var(--black);
+    background: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+.btn:hover {
+    background: var(--green);
+    color: white;
+}
+.header {
+    border: 0px solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+
+}
+  
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: green;
+}
+  
+.header .logo:hover {
+    color: rgb(97, 238, 15);
+}
+  
+.header .logo i {
+    color: var(--green);
+}
+  
+.header .navbar a {
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--green);
+}
+  
+.header .navbar a:hover {
+    color: rgb(97, 238, 15);
+}
+.header .icons div {
+    border: 0px solid;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 0.5rem;
+    background: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-right: 0.3rem;
+    text-align: center;
+    cursor: pointer;
+}
+  
+.header .icons div:hover {
+    background: var(--green);
+    color: white;
+}
+  
+#menu-btn {
+    display: none;
+}
+  
+.header .navbar.active {
+    right: 2rem;
+    transform: 0.4s linear;
+}
+.header .search-form {
+    border: 0px solid;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+  
+.header .search-form.active {
+    right: 2rem;
+    transition: 0.4s linear;
+}
+  
+.header .search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+  
+.header .search-form label:hover {
+    color: var(--green);
+}
+  
+.header .login-form {
+    border: 0px solid;
+    position: absolute;
+    width: 35rem;
+    top: 110%;
+    right: -110%;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background: #fff;
+    text-align: center;
+}
+  
+.header .login-form.active {
+    right: 2rem;
+    transition: 0.4s linear;
+}
+  
+.header .login-form h3 {
+    font-size: 2.5rem;
+    text-transform: none;
+    color: var(--black);
+}
+  
+.header .login-form .box {
+    width: 100%;
+    border: 0px solid;
+    margin: 0.7rem 0;
+    background: #eee;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+   
+}
+  
+.header .login-form p {
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+    color: var(--light-color);
+}
+  
+.header .login-form p a {
+    color: var(--green);
+    text-decoration: underline;
+}
 /*video*/
-.contenido-video{
+.contenido-header{
     position: relative;
+    z-index: -2;
 }
 
-.contenido-video::before{
+.contenido-header::before{
     content: '';
     position: absolute;
     top:0;
@@ -94,9 +267,10 @@ img{
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,.5);
+    
 }
 
-.texto-video{
+.texto-encabezado{
     position: absolute;
     z-index: 2;
     width: 100%;
@@ -106,55 +280,84 @@ img{
     align-items: center;
     justify-content: center;
 }
-.texto-video h2{
+.texto-encabezado h1{
     color: var(--blanco);
-    font-size: 4rem;
+    font-size: 5rem;
+    text-align: center;
 }
-.texto-video p{
+.texto-encabezado p{
     color: var(--blanco);
-    font-size: 2rem;
-}
-@media(min-width: 768px) {
-    .texto-video h2{
-        font-size: 8rem;
-    }
+    font-size: 3rem;
+    text-align: center;
 }
 
 video{
     width: 100%;
     height: 100%;
 }
-
-  
-
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+/*Seccion Bienvenida*/
+.contenedor-saludo{
     
-    background-color: var(--blanco);
+    padding-top: 5rem;
+}
+@media(min-width: 768px) {
+    .contenedor-saludo{
+        display: flex;
+        justify-content: space-between;
+    }   
 }
 
+.texto-saludo .bienvenida{
+    font-size: 4rem;
+    color: var(--green);
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .texto-saludo .bienvenida{
+        text-align: left;
+    }
+}
+.texto-saludo h1{
+    font-size: 5rem;
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .texto-saludo h1{
+        text-align: left;
+    }
+}
+.texto-saludo p{
+    font-size: 2rem;
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .texto-saludo p{
+        text-align: left;
+    }
+}
+/*Seccion Recetas*/
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
 .section-title{
    flex:0 0 100%;
    max-width: 100%;
    margin-bottom: 60px;
 }
 .section-title h1{
-    text-align: center;
-    font-size: 5rem;
+   text-align: center;
+   font-size: 36px;
+   color:#000000;
 }
-.section-title p{
-    text-align: center;
-    font-size: 2rem;
+.recetas{
+	min-height: 100vh;
+	padding:80px 0;
 }
-
-.recetas-container{
-    max-width: 1170px;
-    margin: auto;
-    background: var(--blanco);
-}
-
 
 .recetas .receta-items{
    flex:0 0 100%;
@@ -173,12 +376,11 @@ video{
 .recetas .receta-items .read-more-cont{
    display: none;
 }
-.recetas .receta-items .item-inner h3{
+.services .service-items .item-inner h3{
    font-size: 20px;
    color:#000000;
    margin-bottom: 30px;
    position: relative;
-  
 }
 .recetas .receta-items .item-inner h3::before{
  content: '';
@@ -191,17 +393,19 @@ video{
 }
 
 .recetas .receta-items .item-inner p{
-   color:var(--blanco);
+   color:#555555;
    font-size: 16px;
    margin:0 0 30px;
 }
 .recetas .receta-items .item-inner .btn-recetas{
-   font-size: 16px;
-   background-color: transparent;
-   border:1px solid var(--verde);
-   color:var(--verde);
-   padding: 8px 15px;
-   cursor: pointer;
+    font-size: 16px;
+    background-color: var(--green);
+    border:1px solid var(--green);
+    color: var(--blanco);
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
 }
 
 .popup-box{
@@ -217,12 +421,12 @@ video{
    transition: all 0.5s ease-in-out;
 }
 .popup-box.open{
-    visibility: visible;
-    opacity:1;	
+ visibility: visible;
+   opacity:1;	
 }
 .popup-box .popup-content{
    background-color: #ffffff;
-   width: 800px;
+   width: 600px;
    position: absolute;
    left: 50%;
    top:50%;
@@ -232,11 +436,11 @@ video{
 
 .popup-box .popup-header{
    padding: 15px 40px 15px 15px;
-   border-bottom: 1px solid var(--oscuro);
+   border-bottom: 1px solid #dddddd;
 }
 .popup-box .popup-header h3{
    margin:0;
-   color:var(--oscuro);
+   color: var(--oscuro);
    font-size: 20px;
 }
 .popup-box .popup-header .popup-close-icon{
@@ -263,7 +467,7 @@ video{
 }
 .popup-box .popup-body p{
    font-size: 16px;
-   color:var(--oscuro);
+   color:#555555;
    margin:0 0 15px;
 }
 .popup-box .popup-footer{
@@ -273,10 +477,10 @@ video{
 }
 .popup-box .popup-footer .btn-recetas{
    padding: 8px 15px;
-   border:1px solid var(--verde);
+   border:1px solid var(--green);
    color: var(--blanco);
    font-size: 16px;
-   background-color: var(--verde);
+   background-color: var(--green);
    cursor: pointer;
    border-radius: 4px;
 }
@@ -285,24 +489,20 @@ video{
 }
 
 
-/*responsive*/
 
-@media(max-width: 767px){
-   .recetas .receta-items .item{
-     flex:0 0 100%;
-     max-width: 100%;
-  }
-  .popup-box .popup-content{
-       width: calc(100% - 30px);
-  }
-} 
 
+
+
+
+
+
+/*Separador*/
 .separador{
-    background-image: url('/media/desayuno.jpg');
+    background-image: url('/media/trifle-de-frutos-rojos-sin-tacc.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    position: center;
+    position: relative;
     z-index: 2;
 }
 .separador::before{
@@ -325,22 +525,155 @@ video{
     color: var(--blanco);
     text-align: center;
 }
-@media(min-width: 768px) {
-    .contenido-separador h2{
-        text-align: left;
-        font-size: 5rem;
-        color: var(--blanco);
-    }
-}
+
 .contenido-separador p{
     color: var(--blanco);
     font-size: 3rem;
     text-align: center;
 }
-@media(min-width: 768px) {
+
+/*Footer*/
+.pie-pagina {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+    color: #333;
+    font-size: 14px;
+}
+  
+.cont {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+  
+.columna {
+    padding: 0 15px;
+}
+  
+.columna h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+  
+.columna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.columna ul li {
+    margin-bottom: 5px;
+}
+  
+.columna ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+  
+.columna ul li a:hover {
+    color: #2c8d20;
+}
+  
+.columna img {
+    max-width: 70px;
+}
+  
+.derechos {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #cafdb7;
+    font-size: 12px;
+    color: #666;
+}
+/*Media Queries*/
+
+@media (max-width: 991px) {
+    html {
+      font-size: 55%;
+    }
+  
+  
+    
+}
+  
+  @media (max-width: 768px) {
+    body {
+      height: 66%;
+    }
+  
+    #menu-btn {
+      display: inline-block;
+    }
+  
+    .header .search-form {
+      width: 30%;
+      
+    }
+    .header a{
+        display: none;
+    }
+   .header .icons {
+    display: inline;
+   }
+  
+  
+    .header .navbar {
+      position: absolute;
+      top: 110%;
+      right: -110%;
+      width: 30rem;
+      box-shadow: var(--box-shadow);
+      border-radius: 0.5rem;
+      background: #fff;
+      
+    }
+  
+    .header .navbar a {
+      font-size: 1.5rem;
+      margin: 1.5rem 2rem;
+      display: block;
+    }
+    .contenido-header {
+        z-index: 1;
+    }
+    .texto-encabezado h2{
+        font-size: 8rem;
+    }
+    .recetas .receta-items .item{
+        flex:0 0 100%;
+        max-width: 100%;
+    }
+    .popup-box .popup-content{
+          width: calc(100% - 30px);
+    }
+    .contenido-separador h2{
+        text-align: left;
+        font-size: 5rem;
+        color: var(--blanco);
+    }
     .contenido-separador p{
         text-align: left;
     }
+    
+  
+    .pie-pagina  {
+      height: 90%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+      padding:10% 0;
+    }
+  
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-self: flex-end;
+     
+    }
+  
+  
 }
-
-
+  
