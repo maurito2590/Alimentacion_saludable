@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../Estilos/estilos.css">
     <link rel="stylesheet" href="/Estilos/css-tienda.css">
     <link rel="icon" href="../media/producto-de-la-naturaleza.ico">
-    <script src="/js/funciones.js"></script>
 </head>
 <body>
     <header class="header">
@@ -26,8 +25,8 @@
             <div class="fa fa-bars" id="menu-btn"></div>
         </div>
         <div class="carrito"><span id="total-carrito">Total Carrito: $</span>
-            <a id="comprar-link" href="#" target="_blank" style="display: none">
-                <button class="btn-comprar" id="comprar-btn">Comprar carrito</button>
+            <a id="comprar-link" style="display: none">
+                <button class="btn-comprar" id="comprar">Comprar carrito</button>
               </a>
               
         </div>
@@ -66,7 +65,7 @@
             <img src="/media/productos/legumbres.jpg" alt="Vegetales">
             <h3>Vegetales</h3>
             <p>Precio: <span id="precioVegetales"></span></p>
-            <p>Cantidad disponible: <span id="cantidadVegetales"></span></p>
+            <p>Disponible: <span id="cantidadVegetales"></span></p>
             <button onclick="agregarAlCarrito('Vegetales')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('Vegetales')">Quitar del carrito</button>
           </div>
@@ -75,7 +74,7 @@
             <img src="/media/productos/frutas.jpg" alt="Frutas">
             <h3>Frutas</h3>
             <p>Precio: <span id="precioFrutas"></span></p>
-            <p>Cantidad disponible: <span id="cantidadFrutas"></span></p>
+            <p>Disponible: <span id="cantidadFrutas"></span></p>
             <button onclick="agregarAlCarrito('Frutas')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('Frutas')">Quitar del carrito</button>
           </div>
@@ -84,7 +83,7 @@
             <img src="/media/productos/cereales.jfif" alt="Cereales">
             <h3>Cereales</h3>
             <p>Precio: <span id="precioCereales"></span></p>
-            <p>Cantidad disponible: <span id="cantidadCereales"></span></p>
+            <p>Disponible: <span id="cantidadCereales"></span></p>
             <button onclick="agregarAlCarrito('Cereales')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('Cereales')">Quitar del carrito</button>
           </div>
@@ -93,7 +92,7 @@
             <img src="/media/productos/semillas.jfif" alt="Semillas">
             <h3>Semillas</h3>
             <p>Precio: <span id="precioSemillas"></span></p>
-            <p>Cantidad disponible: <span id="cantidadSemillas"></span></p>
+            <p>Disponible: <span id="cantidadSemillas"></span></p>
             <button onclick="agregarAlCarrito('Semillas')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('Semillas')">Quitar del carrito</button>
           </div>
@@ -102,7 +101,7 @@
             <img src="/media/productos/frutos secos.jfif" alt="Frutos Secos">
             <h3>Frutos Secos</h3>
             <p>Precio: <span id="precioFrutosSecos"></span></p>
-            <p>Cantidad disponible: <span id="cantidadFrutosSecos"></span></p>
+            <p>Disponible: <span id="cantidadFrutosSecos"></span></p>
             <button onclick="agregarAlCarrito('FrutosSecos')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('FrutosSecos')">Quitar del carrito</button>
           </div>
@@ -111,7 +110,7 @@
             <img src="/media/productos/feculamandioca.jfif" alt="Fécula de Mandioca">
             <h3>Fécula de Mandioca</h3>
             <p>Precio: <span id="precioFeculaMandioca"></span></p>
-            <p>Cantidad disponible: <span id="cantidadFeculaMandioca"></span></p>
+            <p>Disponible: <span id="cantidadFeculaMandioca"></span></p>
             <button onclick="agregarAlCarrito('FeculaMandioca')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('FeculaMandioca')">Quitar del carrito</button>
           </div>
@@ -120,7 +119,7 @@
             <img src="/media/productos/maicena.jfif" alt="Maicena">
             <h3>Maicena</h3>
             <p>Precio: <span id="precioMaicena"></span></p>
-            <p>Cantidad disponible: <span id="cantidadMaicena"></span></p>
+            <p>Disponible: <span id="cantidadMaicena"></span></p>
             <button onclick="agregarAlCarrito('Maicena')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('Maicena')">Quitar del carrito</button>
           </div>
@@ -129,7 +128,7 @@
             <img src="/media/productos/salvado.jfif" alt="Salvado">
             <h3>Salvado</h3>
             <p>Precio: <span id="precioSalvado"></span></p>
-            <p>Cantidad disponible: <span id="cantidadSalvado"></span></p>
+            <p>Disponible: <span id="cantidadSalvado"></span></p>
             <button onclick="agregarAlCarrito('Salvado')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('Salvado')">Quitar del carrito</button>
           </div>
@@ -138,16 +137,16 @@
             <img src="/media/productos/mantecacacao.jfif" alt="Manteca de Cacao">
             <h3>Manteca de Cacao</h3>
             <p>Precio: <span id="precioMantecaCacao"></span></p>
-            <p>Cantidad disponible: <span id="cantidadMantecaCacao"></span></p>
+            <p>Disponible: <span id="cantidadMantecaCacao"></span></p>
             <button onclick="agregarAlCarrito('MantecaCacao')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('MantecaCacao')">Quitar del carrito</button>
           </div>
           
           <div class="producto" id="MantecaAlmendras">
             <img src="/media/productos/mantalmendra.jfif" alt="Manteca de Almendras">
-            <h3>Manteca de Almendras</h3>
+            <h3>Manteca Almendras</h3>
             <p>Precio: <span id="precioMantecaAlmendras"></span></p>
-            <p>Cantidad disponible: <span id="cantidadMantecaAlmendras"></span></p>
+            <p>Disponible: <span id="cantidadMantecaAlmendras"></span></p>
             <button onclick="agregarAlCarrito('MantecaAlmendras')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('MantecaAlmendras')">Quitar del carrito</button>
           </div>
@@ -156,7 +155,7 @@
             <img src="/media/productos/manmani.jfif" alt="Manteca de Maní">
             <h3>Manteca de Maní</h3>
             <p>Precio: <span id="precioMantecaMani"></span></p>
-            <p>Cantidad disponible: <span id="cantidadMantecaMani"></span></p>
+            <p>Disponible: <span id="cantidadMantecaMani"></span></p>
             <button onclick="agregarAlCarrito('MantecaMani')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('MantecaMani')">Quitar del carrito</button>
           </div>
@@ -165,7 +164,7 @@
             <img src="/media/productos/mantvegana.jfif" alt="Manteca Vegana">
             <h3>Manteca Vegana</h3>
             <p>Precio: <span id="precioMantecaVegana"></span></p>
-            <p>Cantidad disponible: <span id="cantidadMantecaVegana"></span></p>
+            <p>Disponible: <span id="cantidadMantecaVegana"></span></p>
             <button onclick="agregarAlCarrito('MantecaVegana')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('MantecaVegana')">Quitar del carrito</button>
           </div>
@@ -174,7 +173,7 @@
             <img src="/media/productos/gomaxanta.png" alt="Goma Xantana">
             <h3>Goma Xantana</h3>
             <p>Precio: <span id="precioGomaXantana"></span></p>
-            <p>Cantidad disponible: <span id="cantidadGomaXantana"></span></p>
+            <p>Disponible: <span id="cantidadGomaXantana"></span></p>
             <button onclick="agregarAlCarrito('GomaXantana')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('GomaXantana')">Quitar del carrito</button>
           </div>
@@ -183,7 +182,7 @@
             <img src="/media/productos/hierbas.jpg" alt="Hierbas">
             <h3>Hierbas</h3>
             <p>Precio: <span id="precioHierbas"></span></p>
-            <p>Cantidad disponible: <span id="cantidadHierbas"></span></p>
+            <p>Disponible: <span id="cantidadHierbas"></span></p>
             <button onclick="agregarAlCarrito('Hierbas')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('Hierbas')">Quitar del carrito</button>
           </div>
@@ -192,7 +191,7 @@
             <img src="/media/productos/mayveg.jfif" alt="Mayonesa Vegana">
             <h3>Mayonesa Vegana</h3>
             <p>Precio: <span id="precioMayonesaVegana"></span></p>
-            <p>Cantidad disponible: <span id="cantidadMayonesaVegana"></span></p>
+            <p>Disponible: <span id="cantidadMayonesaVegana"></span></p>
             <button onclick="agregarAlCarrito('MayonesaVegana')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('MayonesaVegana')">Quitar del carrito</button>
           </div>
@@ -201,7 +200,7 @@
             <img src="/media/productos/levcerv.jfif" alt="Levadura de Cerveza">
             <h3>Levadura de Cerveza</h3>
             <p>Precio: <span id="precioLevaduraCerveza"></span></p>
-            <p>Cantidad disponible: <span id="cantidadLevaduraCerveza"></span></p>
+            <p>Disponible: <span id="cantidadLevaduraCerveza"></span></p>
             <button onclick="agregarAlCarrito('LevaduraCerveza')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('LevaduraCerveza')">Quitar del carrito</button>
           </div>
@@ -210,7 +209,7 @@
             <img src="/media/productos/larroz.jpg" alt="Leche de Arroz">
             <h3>Leche de Arroz</h3>
             <p>Precio: <span id="precioLecheArroz"></span></p>
-            <p>Cantidad disponible: <span id="cantidadLecheArroz"></span></p>
+            <p>Disponible: <span id="cantidadLecheArroz"></span></p>
             <button onclick="agregarAlCarrito('LecheArroz')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('LecheArroz')">Quitar del carrito</button>
           </div>
@@ -219,7 +218,7 @@
             <img src="/media/productos/lalmendra.jfif" alt="Leche de Almendra">
             <h3>Leche de Almendra</h3>
             <p>Precio: <span id="precioLecheAlmendra"></span></p>
-            <p>Cantidad disponible: <span id="cantidadLecheAlmendra"></span></p>
+            <p>Disponible: <span id="cantidadLecheAlmendra"></span></p>
             <button onclick="agregarAlCarrito('LecheAlmendra')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('LecheAlmendra')">Quitar del carrito</button>
           </div>
@@ -228,7 +227,7 @@
             <img src="/media/productos/lavena.jfif" alt="Leche de Avena">
             <h3>Leche de Avena</h3>
             <p>Precio: <span id="precioLecheAvena"></span></p>
-            <p>Cantidad disponible: <span id="cantidadLecheAvena"></span></p>
+            <p>Disponible: <span id="cantidadLecheAvena"></span></p>
             <button onclick="agregarAlCarrito('LecheAvena')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('LecheAvena')">Quitar del carrito</button>
           </div>
@@ -237,7 +236,7 @@
             <img src="/media/productos/lsoja.jfif" alt="Leche de Soja">
             <h3>Leche de Soja</h3>
             <p>Precio: <span id="precioLecheSoja"></span></p>
-            <p>Cantidad disponible: <span id="cantidadLecheSoja"></span></p>
+            <p>Disponible: <span id="cantidadLecheSoja"></span></p>
             <button onclick="agregarAlCarrito('LecheSoja')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('LecheSoja')">Quitar del carrito</button>
           </div>
@@ -246,7 +245,7 @@
             <img src="/media/productos/lcañamo.jfif" alt="Leche de Cáñamo">
             <h3>Leche de Cáñamo</h3>
             <p>Precio: <span id="precioLecheCanamo"></span></p>
-            <p>Cantidad disponible: <span id="cantidadLecheCanamo"></span></p>
+            <p>Disponible: <span id="cantidadLecheCanamo"></span></p>
             <button onclick="agregarAlCarrito('LecheCanamo')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('LecheCanamo')">Quitar del carrito</button>
           </div>
@@ -255,7 +254,7 @@
             <img src="/media/productos/lcoco.jfif" alt="Leche de Coco">
             <h3>Leche de Coco</h3>
             <p>Precio: <span id="precioLecheCoco"></span></p>
-            <p>Cantidad disponible: <span id="cantidadLecheCoco"></span></p>
+            <p>Disponible: <span id="cantidadLecheCoco"></span></p>
             <button onclick="agregarAlCarrito('LecheCoco')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('LecheCoco')">Quitar del carrito</button>
           </div>
@@ -264,7 +263,7 @@
             <img src="/media/productos/pimenton.jfif" alt="Pimentón Ahumado">
             <h3>Pimentón Ahumado</h3>
             <p>Precio: <span id="precioPimentonAhumado"></span></p>
-            <p>Cantidad disponible: <span id="cantidadPimentonAhumado"></span></p>
+            <p>Disponible: <span id="cantidadPimentonAhumado"></span></p>
             <button onclick="agregarAlCarrito('PimentonAhumado')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('PimentonAhumado')">Quitar del carrito</button>
           </div>
@@ -273,7 +272,7 @@
             <img src="/media/productos/nori.jfif" alt="Alga Nori">
             <h3>Alga Nori</h3>
             <p>Precio: <span id="precioAlgaNori"></span></p>
-            <p>Cantidad disponible: <span id="cantidadAlgaNori"></span></p>
+            <p>Disponible: <span id="cantidadAlgaNori"></span></p>
             <button onclick="agregarAlCarrito('AlgaNori')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('AlgaNori')">Quitar del carrito</button>
           </div>
@@ -282,7 +281,7 @@
             <img src="/media/productos/tofu.jfif" alt="Tofu">
             <h3>Tofu</h3>
             <p>Precio: <span id="precioTofu"></span></p>
-            <p>Cantidad disponible: <span id="cantidadTofu"></span></p>
+            <p>Disponible: <span id="cantidadTofu"></span></p>
             <button onclick="agregarAlCarrito('Tofu')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('Tofu')">Quitar del carrito</button>
           </div>
@@ -291,7 +290,7 @@
             <img src="/media/productos/susth.jfif" alt="Sustitutos del Huevo">
             <h3>Sustitutos del Huevo</h3>
             <p>Precio: <span id="precioSustitutosHuevo"></span></p>
-            <p>Cantidad disponible: <span id="cantidadSustitutosHuevo"></span></p>
+            <p>Disponible: <span id="cantidadSustitutosHuevo"></span></p>
             <button onclick="agregarAlCarrito('SustitutosHuevo')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('SustitutosHuevo')">Quitar del carrito</button>
           </div>
@@ -300,7 +299,7 @@
             <img src="/media/productos/lino.jfif" alt="Semillas de Lino">
             <h3>Semillas de Lino</h3>
             <p>Precio: <span id="precioSemillasLino"></span></p>
-            <p>Cantidad disponible: <span id="cantidadSemillasLino"></span></p>
+            <p>Disponible: <span id="cantidadSemillasLino"></span></p>
             <button onclick="agregarAlCarrito('SemillasLino')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('SemillasLino')">Quitar del carrito</button>
           </div>
@@ -309,7 +308,7 @@
             <img src="/media/productos/chia.jfif" alt="Semillas de Chía">
             <h3>Semillas de Chía</h3>
             <p>Precio: <span id="precioSemillasChia"></span></p>
-            <p>Cantidad disponible: <span id="cantidadSemillasChia"></span></p>
+            <p>Disponible: <span id="cantidadSemillasChia"></span></p>
             <button onclick="agregarAlCarrito('SemillasChia')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('SemillasChia')">Quitar del carrito</button>
           </div>
@@ -318,7 +317,7 @@
             <img src="/media/productos/acoco.png" alt="Aceite de Coco">
             <h3>Aceite de Coco</h3>
             <p>Precio: <span id="precioAceiteCoco"></span></p>
-            <p>Cantidad disponible: <span id="cantidadAceiteCoco"></span></p>
+            <p>Disponible: <span id="cantidadAceiteCoco"></span></p>
             <button onclick="agregarAlCarrito('AceiteCoco')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('AceiteCoco')">Quitar del carrito</button>
           </div>
@@ -327,7 +326,7 @@
             <img src="/media/productos/agave.jfif" alt="Néctar de Agave">
             <h3>Néctar de Agave</h3>
             <p>Precio: <span id="precioNectarAgave"></span></p>
-            <p>Cantidad disponible: <span id="cantidadNectarAgave"></span></p>
+            <p>Disponible: <span id="cantidadNectarAgave"></span></p>
             <button onclick="agregarAlCarrito('NectarAgave')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('NectarAgave')">Quitar del carrito</button>
           </div>
@@ -336,7 +335,7 @@
             <img src="/media/productos/sirope.jfif" alt="Sirope de Arce">
             <h3>Sirope de Arce</h3>
             <p>Precio: <span id="precioSiropeArce"></span></p>
-            <p>Cantidad disponible: <span id="cantidadSiropeArce"></span></p>
+            <p>Disponible: <span id="cantidadSiropeArce"></span></p>
             <button onclick="agregarAlCarrito('SiropeArce')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('SiropeArce')">Quitar del carrito</button>
           </div>
@@ -345,7 +344,7 @@
             <img src="/media/productos/melasa.jpg" alt="Melaza Residual">
             <h3>Melaza Residual</h3>
             <p>Precio: <span id="precioMelazaResidual"></span></p>
-            <p>Cantidad disponible: <span id="cantidadMelazaResidual"></span></p>
+            <p>Disponible: <span id="cantidadMelazaResidual"></span></p>
             <button onclick="agregarAlCarrito('MelazaResidual')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('MelazaResidual')">Quitar del carrito</button>
           </div>
@@ -354,7 +353,7 @@
             <img src="/media/productos/hoja.jfif" alt="Masas y Hojaldres">
             <h3>Masas y Hojaldres</h3>
             <p>Precio: <span id="precioMasasHojaldres"></span></p>
-            <p>Cantidad disponible: <span id="cantidadMasasHojaldres"></span></p>
+            <p>Disponible: <span id="cantidadMasasHojaldres"></span></p>
             <button onclick="agregarAlCarrito('MasasHojaldres')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('MasasHojaldres')">Quitar del carrito</button>
           </div>
@@ -363,7 +362,7 @@
             <img src="/media/productos/harroz.jpeg" alt="Harina de Arroz">
             <h3>Harina de Arroz</h3>
             <p>Precio: <span id="precioHarinaArroz"></span></p>
-            <p>Cantidad disponible: <span id="cantidadHarinaArroz"></span></p>
+            <p>Disponible: <span id="cantidadHarinaArroz"></span></p>
             <button onclick="agregarAlCarrito('HarinaArroz')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('HarinaArroz')">Quitar del carrito</button>
           </div>
@@ -372,7 +371,7 @@
             <img src="/media/productos/serra.jfif" alt="Trigo Sarraceno">
             <h3>Trigo Sarraceno</h3>
             <p>Precio: <span id="precioTrigoSarraceno"></span></p>
-            <p>Cantidad disponible: <span id="cantidadTrigoSarraceno"></span></p>
+            <p>Disponible: <span id="cantidadTrigoSarraceno"></span></p>
             <button onclick="agregarAlCarrito('TrigoSarraceno')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('TrigoSarraceno')">Quitar del carrito</button>
           </div>
@@ -381,7 +380,7 @@
             <img src="/media/productos/polvoh.jfif" alt="Polvo de Hornear">
             <h3>Polvo de Hornear</h3>
             <p>Precio: <span id="precioPolvoHornear"></span></p>
-            <p>Cantidad disponible: <span id="cantidadPolvoHornear"></span></p>
+            <p>Disponible: <span id="cantidadPolvoHornear"></span></p>
             <button onclick="agregarAlCarrito('PolvoHornear')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('PolvoHornear')">Quitar del carrito</button>
           </div>
@@ -390,7 +389,7 @@
             <img src="/media/productos/psy.jfif" alt="Psyllium">
             <h3>Psyllium</h3>
             <p>Precio: <span id="precioPsyllium"></span></p>
-            <p>Cantidad disponible: <span id="cantidadPsyllium"></span></p>
+            <p>Disponible: <span id="cantidadPsyllium"></span></p>
             <button onclick="agregarAlCarrito('Psyllium')">Agregar al carrito</button>
             <button onclick="quitarDelCarrito('Psyllium')">Quitar del carrito</button>
           </div>
@@ -446,8 +445,8 @@
             <small>&copy; 2023 <b>CMF Group</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
-    <script src="../js/main.js"></script>
     <script type="module" src="/js/funcion_auxiliar.js"></script>
+    <script src="/js/funciones.js"></script>
     <script>
         // Convierte el JSON a un array plano de IDs
 

@@ -111,3 +111,51 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+const comprarBtn = document.getElementById("comprar");
+
+if (comprarBtn) {
+  comprarBtn.addEventListener("click", function () {
+    // Bloquear el botón después de hacer clic
+    comprarBtn.disabled = true;
+
+    // Datos a enviar
+    const datosAEnviar = {
+      productos: carritoDeCompras,
+      cantidad_total: carritoDeCompras.length,
+      precio_total: precioTotalCarrito,
+    };
+
+    // Solicitud POST
+    fetch('http://localhost:8001/procesar_compra', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(datosAEnviar)
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Respuesta del servidor:', data);
+
+      // Almacena la preference_id en la sessionStorage
+      sessionStorage.setItem('preference_id', data.preference_id);
+      console.log('preference_id almacenado en la sesión:', sessionStorage.getItem('preference_id'));
+
+      // Redirige solo si la preference_id se creo
+      if (sessionStorage.getItem('preference_id')) {
+        window.open('MP.html', '_blank');
+        comprarBtn.disabled = false;
+      } else {
+        console.log('La preference_id no está presente en la sesión.');
+        alert("Ha ocurrido un error, por favor presiona F5")
+      }
+    })
+    .catch(error => {
+      console.error('Error al enviar datos al servidor:', error);
+
+      // Habilita el boton en caso de error
+      comprarBtn.disabled = false;
+    });
+  });
+}

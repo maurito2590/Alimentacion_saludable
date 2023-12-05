@@ -169,9 +169,9 @@ function calcularTotalCarrito() {
   if (comprarLink) {
     if (precioTotalCarrito > 0) {
       comprarLink.style.display = "block"; // Muestra el enlace
+      console.log(carritoDeCompras)
     } else {
       comprarLink.style.display = "none"; // Oculta el enlace
     }
   }
 }
-
