@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es-la">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administacion Sabores Naturales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estilos.css">
+
+</head>
+
+<body>
+    <section id="app">
+        <div class="container">
+            <div class="login-container mt-5 p-4">
+                <h1 class="login text-center">Acceso Administrador</h1>
+                <form class="login">
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="password"
+                            placeholder="Ingrese contraseña administrativa">
+                    </div>
+                    <div class="mb-3">
+                        <button type="button" id="loginBtn" class="btn btn-block" @click="redirigirUsuarios">Ingresar</button>
+                    </div>
+                </form>
+                <!-- Agregar botón "Volver" -->
+                <div class="mb-3">
+                    <a href="indexAdmin.html" class="btn btn-secondary btn-block">Volver</a>
+                </div>
+            </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!-- Link de VUE -->
+    <script src="/js/usuarios.js"></script>
+    <script src="/js/acceso.js"></script>
+
+</body>
+
+</html>

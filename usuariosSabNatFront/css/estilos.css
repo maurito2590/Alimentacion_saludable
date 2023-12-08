@@ -1,0 +1,56 @@
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1629757509637-7c99379d6d26?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8")
+    center/cover no-repeat; /* Reemplaza 'tu_imagen_de_fondo.jpg' con la URL de tu imagen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0088ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+/* Aplica estilos específicos para el formulario de inicio de sesión */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  background-color: #05ac2c; /* Color celeste de fondo */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.login h1 {
+  color: #008000; /* Color verde para el encabezado */
+  text-align: center;
+}
+
+.login input {
+  margin-bottom: 15px;
+}
+
+.login button {
+  background-color: #008000; /* Color verde para el botón */
+  border: none;
+}
+
+.login button:hover {
+  background-color: #006400; /* Color verde oscuro al pasar el ratón */
+}
