@@ -80,15 +80,22 @@ function actualizarInfoProductoEnDOM(productoID) {
 
 function actualizarBoton(ingredienteID) {
   const boton = document.getElementById(`btn-${ingredienteID}`);
+  
   if (boton) {
     const ingredienteEnCarrito = carritoDeCompras.filter((item) => item.nombre.toLowerCase().replace(/\s/g, '') === ingredienteID.toLowerCase().replace(/\s/g, ''));
+    
     if (ingredienteEnCarrito.length > 0) {
       boton.textContent = `Agregado: ${ingredienteEnCarrito.length}`;
+      // Agregar la clase 'colorear'
+      boton.classList.add('colorear');
     } else {
       boton.textContent = "Agregar al carrito";
+      // Si el botón no está en la condición 'Agregado', eliminamos la clase 'colorear'
+      boton.classList.remove('colorear');
     }
   }
 }
+
 
 // Agregar ingredientes
 function agregarAlCarrito(ingredienteID) {
