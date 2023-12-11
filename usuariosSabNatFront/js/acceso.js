@@ -1,19 +1,16 @@
-function redirigirUsuarios() {
-    // Aquí deberías tener tu lógica para verificar la contraseña
-
-    // Simulación de una contraseña correcta
-    const contrasenaCorrecta = true;
-
-    if (contrasenaCorrecta) {
-        // Actualiza la propiedad isAdmin de Vue
-        app.isAdmin = true;
-        window.location.href = '/usuariosAdmin.html';
-    }
-}
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('loginBtn').addEventListener('click', function () {
-        if (confirm('¿Estás seguro de iniciar sesión?')) {
+        var passwordInput = document.getElementById('password').value;
+
+        if (passwordInput === 'admin' && confirm('¿Estás seguro de iniciar sesión?')) {
             redirigirUsuarios();
+        } else {
+            alert('Contraseña incorrecta. Intenta de nuevo.');
         }
     });
 });
+
+function redirigirUsuarios() {
+    // Puedes agregar más lógica si es necesario
+    window.location.href = 'usuariosAdmin.html';
+}

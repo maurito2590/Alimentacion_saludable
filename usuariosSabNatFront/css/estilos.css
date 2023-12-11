@@ -1,56 +1,85 @@
 body {
-  font-family: "Nunito", sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background: url("https://images.unsplash.com/photo-1629757509637-7c99379d6d26?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8")
-    center/cover no-repeat; /* Reemplaza 'tu_imagen_de_fondo.jpg' con la URL de tu imagen */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-align: center;
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(11, 105, 37);
+    text-align: center;
 }
 
 h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.8); /* Añadir fondo blanco transparente al formulario */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0088ff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.2em;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #54bc64;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 20px; /* Espaciado superior */
 }
-/* Aplica estilos específicos para el formulario de inicio de sesión */
+
 .login-container {
-  max-width: 400px;
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
-  background-color: #05ac2c; /* Color celeste de fondo */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .login h1 {
-  color: #008000; /* Color verde para el encabezado */
-  text-align: center;
+    color: #ebedec;
+    text-align: center;
 }
 
 .login input {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .login button {
-  background-color: #008000; /* Color verde para el botón */
-  border: none;
+    background-color: #37c95b;
+    border: none;
 }
 
 .login button:hover {
-  background-color: #006400; /* Color verde oscuro al pasar el ratón */
+    background-color: #37c95b;
 }
+
+.login .btn-secondary {
+    background-color: #6c757d; /* Cambiar el color a gris oscuro para el botón "Volver" */
+    border: none;
+}
+
+.login .btn-secondary:hover {
+    background-color: #6c757d;
+}
+
+.btn-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .arrow {
+    margin-right: 5px;
+  }
