@@ -1,4 +1,4 @@
-const ingredientesJSON = {
+let ingredientesJSON = {
   "categoriasDeIngredientes": [
     {
       "categoria": "Ingredientes Básicos Veganos",
@@ -60,17 +60,48 @@ const ingredientesJSON = {
   ]
 }
 
+const ingredientesOriginales = JSON.parse(JSON.stringify(ingredientesJSON));
+
 const carritoDeCompras = [];
 let precioTotalCarrito = 0;
 
+function obtenerNombresConRepeticiones(carritoDeCompras) {
+  return carritoDeCompras.reduce((acc, producto) => {
+    const existente = acc.find(item => item.nombre === producto.nombre);
+
+    if (existente) {
+      existente.cantidad++;
+    } else {
+      acc.push({
+        nombre: producto.nombre,
+        cantidad: 1,
+        precioUnitario: producto.precio, // Agregamos el precio unitario
+      });
+    }
+
+    return acc;
+  }, []);
+}
+
+const resumenCarrito = obtenerNombresConRepeticiones(carritoDeCompras);
+
+function actualizarCarritoYObtenerResumen() {
+  // Llamada a obtenerNombresConRepeticiones para obtener un resumen actualizado del carrito
+  const resumenCarrito = obtenerNombresConRepeticiones(carritoDeCompras);
+  console.log(resumenCarrito)
+  return resumenCarrito;
+}
 
 // Actualización en tiempo real
 function actualizarInfoProductoEnDOM(productoID) {
+  console.log(`Actualizando cantidad para el producto ID: ${productoID}`);
+  
   const producto = ingredientesJSON.categoriasDeIngredientes.reduce((prev, current) => {
     return prev.concat(current.ingredientes);
   }, []).find(ingrediente => ingrediente.ID === productoID);
 
   if (producto) {
+    console.log(`Cantidad actualizada: ${producto.cantidad}`);
     document.getElementById(`cantidad${productoID}`).textContent = producto.cantidad;
   } else {
     console.error(`Producto con ID ${productoID} no encontrado en el JSON.`);
@@ -97,7 +128,6 @@ function actualizarBoton(ingredienteID) {
 }
 
 
-// Agregar ingredientes
 function agregarAlCarrito(ingredienteID) {
   for (const categoria of ingredientesJSON.categoriasDeIngredientes) {
     for (const ingrediente of categoria.ingredientes) {
@@ -107,7 +137,8 @@ function agregarAlCarrito(ingredienteID) {
           carritoDeCompras.push({ nombre: ingrediente.nombre, precio: ingrediente.precio });
           calcularTotalCarrito();
           actualizarBoton(ingredienteID);
-          actualizarInfoProductoEnDOM(ingredienteID); // Actualiza la cantidad en el DOM
+          actualizarInfoProductoEnDOM(ingredienteID);
+          actualizarCarritoYObtenerResumen();
           return `Se ha agregado ${ingrediente.nombre} al carrito.`;
         } else {
           // Alerta cuando no hay ingrediente.
@@ -137,7 +168,7 @@ function quitarDelCarrito(ingredienteID) {
     carritoDeCompras.splice(index, 1);
     calcularTotalCarrito();
     actualizarBoton(ingredienteID);
-    actualizarInfoProductoEnDOM(ingredienteID); // Actualizar la cantidad en el DOM
+    actualizarInfoProductoEnDOM(ingredienteID);
     return `Se ha quitado ${ingrediente.nombre} del carrito.`;
   } else {
     return `El ingrediente con ID ${ingredienteID} no se encontró en el carrito.`;
@@ -173,12 +204,22 @@ function calcularTotalCarrito() {
 
   // Verifica si el carrito tiene elementos y muestra/oculta el enlace "Comprar"
   const comprarLink = document.getElementById("comprar-link");
+  const resetLink = document.getElementById("reset-link");
   if (comprarLink) {
     if (precioTotalCarrito > 0) {
-      comprarLink.style.display = "block"; // Muestra el enlace
-      console.log(carritoDeCompras)
+      comprarLink.style.display = "inline-block";
+      resetLink.style.display = "inline-block"
     } else {
-      comprarLink.style.display = "none"; // Oculta el enlace
+      comprarLink.style.display = "none";
+      resetLink.style.display = "none";
     }
   }
 }
+
+// Funcion para reiniciar solo el carrito
+function reiniciarCarrito() {
+  carritoDeCompras.length = 0;
+  precioTotalCarrito = 0;
+  sessionStorage.removeItem('datos_a_enviar');
+}
+

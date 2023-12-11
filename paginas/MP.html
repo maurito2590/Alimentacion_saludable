@@ -5,29 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <link rel="stylesheet" href="/Estilos/PruebaMP.css">
     <title>Document</title>
 </head>
 <body>
-    <section>
+    <div class="resumen-container">
         <div id="temporizador">
-
         </div>
-        <div id="carrito-container">
+        <div>
             <h3>
-                Productos: <span id="productos"></span>
+                Productos: 
             </h3>
+            <span id="productos"></span>
+        </div>
+        <div>
             <h3>
-                Cantidad Total: <span id="cantidad-total"></span>
+                Cantidad Total: 
             </h3>
+            <span id="cantidad-total"></span>
+        </div>
+        <div>            
             <h3>
-                Precio Total: <span id="precio-total"></span>
+                Precio Total:
             </h3>
-            <div id="botonVolver">
-                <button>Volver</button>
-            </div>
+            <span id="precio-total"></span>
+        </div>
+        <div id="botonVolver">
+            <button>Volver</button>
         </div>
         <div id="wallet_container"></div>
-    </section>
+    </div>
     <script src="/js/pruebaMP.js"></script>
 </body>
 </html>

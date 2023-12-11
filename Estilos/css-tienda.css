@@ -95,6 +95,7 @@ img {
 
 .carrito {
     font-size: 15px;
+    text-align: center;
 }
 
 .btn-comprar {
@@ -110,6 +111,23 @@ img {
     background-color: #35ad33;
     color: #ffffff;
     transition: .3s ease-out;
+}
+
+.btn-reset {
+  font-size: 15px;
+  border: .2px solid #000000;
+  border-radius: 15px;
+  margin: 8px;
+  padding: 5px;
+  margin-left: 10px;
+  width: 100%;
+  font-weight: bolder;
+}
+
+.btn-reset:hover {
+  background-color: #e0070b;
+  color: #ffffff;
+  transition: .3s ease-out;
 }
 
 .colorear {

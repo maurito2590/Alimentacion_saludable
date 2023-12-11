@@ -15,7 +15,7 @@ def procesar_compra():
     # Actualiza el diccionario de productos
     for producto in data['productos']:
         nombre = producto['nombre']
-        precio = producto['precio']
+        precio = producto['precioUnitario']
         if nombre in productos_dict:
             productos_dict[nombre]['cantidad'] += 1
         else:

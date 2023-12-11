@@ -1,8 +1,10 @@
 var valorAlmacenado = sessionStorage.getItem('preference_id');
+var datosAlmacenados = sessionStorage.getItem('datos_a_enviar');
 console.log('Valor almacenado:', valorAlmacenado);
+console.log('Datos almacenados', datosAlmacenados);
 
 // Establecer el tiempo de sesion
-var tiempoExpiracion = 10 * 60 * 1000; // 5 minutos
+var tiempoExpiracion = 30 * 60 * 1000; // 5 minutos
 
 // Obtener el elemento HTML
 var temporizadorElemento = document.getElementById('temporizador');

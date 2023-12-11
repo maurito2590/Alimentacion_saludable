@@ -1,0 +1,10 @@
+.resumen-container {
+    border: .5px solid #000000;
+    border-radius: 20px;
+    text-align: center;
+    display: grid;
+}
+
+h3 {
+    text-decoration: underline;
+}
