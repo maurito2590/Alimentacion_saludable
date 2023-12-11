@@ -3,58 +3,58 @@ const ingredientesJSON = {
     {
       "categoria": "Ingredientes Básicos Veganos",
       "ingredientes": [
-        { "nombre": "Vegetales", "ID": "Vegetales", "precio": 2345, "cantidad": 150 },
-        { "nombre": "Frutas", "ID": "Frutas", "precio": 567, "cantidad": 200 },
-        { "nombre": "Cereales", "ID": "Cereales", "precio": 1987, "cantidad": 120 },
-        { "nombre": "Semillas", "ID": "Semillas", "precio": 2435, "cantidad": 824 },
-        { "nombre": "Frutos secos", "ID": "FrutosSecos", "precio": 789, "cantidad": 59 },
-        { "nombre": "Fecula mandioca", "ID": "FeculaMandioca", "precio": 2345, "cantidad": 25 },
-        { "nombre": "Maicena", "ID": "Maicena", "precio": 987, "cantidad": 28 },
-        { "nombre": "Salvado", "ID": "Salvado", "precio": 654, "cantidad": 58 },
-        { "nombre": "Manteca cacao", "ID": "MantecaCacao", "precio": 3210, "cantidad": 30 },
-        { "nombre": "Manteca de Almendras", "ID": "MantecaAlmendras", "precio": 4321, "cantidad": 22 },
-        { "nombre": "Manteca de maní", "ID": "MantecaMani", "precio": 5432, "cantidad": 16 },
-        { "nombre": "Manteca vegana", "ID": "MantecaVegana", "precio": 876, "cantidad": 18 },
-        { "nombre": "Goma xantana", "ID": "GomaXantana", "precio": 9876, "cantidad": 30 },
-        { "nombre": "Hierbas", "ID": "Hierbas", "precio": 6543, "cantidad": 25 },
-        { "nombre": "Mayonesa vegana", "ID": "MayonesaVegana", "precio": 5678, "cantidad": 10 },
-        { "nombre": "Levadura de cerveza", "ID": "LevaduraCerveza", "precio": 2109, "cantidad": 12 },
-        { "nombre": "Leche arroz", "ID": "LecheArroz", "precio": 987, "cantidad": 8 },
-        { "nombre": "Leche almendra", "ID": "LecheAlmendra" , "precio": 2345, "cantidad": 10 },
-        { "nombre": "Leche avena", "ID": "LecheAvena", "precio": 2109, "cantidad": 15 },
-        { "nombre": "Leche soja", "ID": "LecheSoja", "precio": 9876, "cantidad": 10 },
-        { "nombre": "Leche cañamo", "ID": "LecheCanamo", "precio": 4321, "cantidad": 5 },
-        { "nombre": "Leche coco", "ID": "LecheCoco", "precio": 5432, "cantidad": 20 },
+        { "nombre": "Vegetales", "ID": "Vegetales", "precio": 650, "cantidad": 150 },
+        { "nombre": "Frutas", "ID": "Frutas", "precio": 560, "cantidad": 200 },
+        { "nombre": "Cereales", "ID": "Cereales", "precio": 1250, "cantidad": 120 },
+        { "nombre": "Semillas", "ID": "Semillas", "precio": 1399, "cantidad": 824 },
+        { "nombre": "Frutos secos", "ID": "FrutosSecos", "precio": 1150, "cantidad": 59 },
+        { "nombre": "Fecula mandioca", "ID": "FeculaMandioca", "precio": 1100, "cantidad": 25 },
+        { "nombre": "Maicena", "ID": "Maicena", "precio": 450, "cantidad": 28 },
+        { "nombre": "Salvado", "ID": "Salvado", "precio": 800, "cantidad": 58 },
+        { "nombre": "Manteca cacao", "ID": "MantecaCacao", "precio": 920, "cantidad": 30 },
+        { "nombre": "Manteca de Almendras", "ID": "MantecaAlmendras", "precio": 1740, "cantidad": 22 },
+        { "nombre": "Manteca de maní", "ID": "MantecaMani", "precio": 900, "cantidad": 16 },
+        { "nombre": "Manteca vegana", "ID": "MantecaVegana", "precio": 2350, "cantidad": 18 },
+        { "nombre": "Goma xantana", "ID": "GomaXantana", "precio": 1620, "cantidad": 30 },
+        { "nombre": "Hierbas", "ID": "Hierbas", "precio": 700, "cantidad": 25 },
+        { "nombre": "Mayonesa vegana", "ID": "MayonesaVegana", "precio": 490, "cantidad": 10 },
+        { "nombre": "Levadura de cerveza", "ID": "LevaduraCerveza", "precio": 210, "cantidad": 12 },
+        { "nombre": "Leche arroz", "ID": "LecheArroz", "precio": 1700, "cantidad": 8 },
+        { "nombre": "Leche almendra", "ID": "LecheAlmendra" , "precio": 2400, "cantidad": 10 },
+        { "nombre": "Leche avena", "ID": "LecheAvena", "precio": 1500, "cantidad": 15 },
+        { "nombre": "Leche soja", "ID": "LecheSoja", "precio": 1500, "cantidad": 10 },
+        { "nombre": "Leche cañamo", "ID": "LecheCanamo", "precio": 1950, "cantidad": 5 },
+        { "nombre": "Leche coco", "ID": "LecheCoco", "precio": 1150, "cantidad": 20 },
       ]
     },
     {
       "categoria": "Ingredientes para simular el sabor de la proteína animal",
       "ingredientes": [
-        { "nombre": "Pimenton ahumado", "ID": "PimentonAhumado", "precio": 1234, "cantidad": 10 },
-        { "nombre": "Alga nori", "ID": "AlgaNori", "precio": 2345, "cantidad": 15 },
-        { "nombre": "Tofu", "ID": "Tofu", "precio": 567, "cantidad": 20 }
+        { "nombre": "Pimenton ahumado", "ID": "PimentonAhumado", "precio": 1320, "cantidad": 10 },
+        { "nombre": "Alga nori", "ID": "AlgaNori", "precio": 2350, "cantidad": 15 },
+        { "nombre": "Tofu", "ID": "Tofu", "precio": 1710, "cantidad": 20 }
       ]
     },
     {
       "categoria": "Repostería",
       "ingredientes": [
-        { "nombre": "Sustitutos huevo", "ID": "SustitutosHuevo", "precio": 1987, "cantidad": 12 },
-        { "nombre": "Semillas lino", "ID": "SemillasLino", "precio": 2435, "cantidad": 185 },
-        { "nombre": "Semillas chía", "ID": "SemillasChia", "precio": 789, "cantidad": 205 },
-        { "nombre": "Aceite coco", "ID": "AceiteCoco", "precio": 2345, "cantidad": 25 },
-        { "nombre": "Néctar agave", "ID": "NectarAgave", "precio": 987, "cantidad": 15 },
-        { "nombre": "Sirope arce", "ID": "SiropeArce", "precio": 3210, "cantidad": 20 },
-        { "nombre": "Melaza residual", "ID": "MelazaResidual", "precio": 4321, "cantidad": 25 },
-        { "nombre": "Masas hojaldres", "ID": "MasasHojaldres", "precio": 5432, "cantidad": 10 }
+        { "nombre": "Sustitutos huevo", "ID": "SustitutosHuevo", "precio": 2650, "cantidad": 12 },
+        { "nombre": "Semillas lino", "ID": "SemillasLino", "precio": 650, "cantidad": 185 },
+        { "nombre": "Semillas chía", "ID": "SemillasChia", "precio": 700, "cantidad": 205 },
+        { "nombre": "Aceite coco", "ID": "AceiteCoco", "precio": 1560, "cantidad": 25 },
+        { "nombre": "Néctar agave", "ID": "NectarAgave", "precio": 2120, "cantidad": 15 },
+        { "nombre": "Sirope arce", "ID": "SiropeArce", "precio": 2400, "cantidad": 20 },
+        { "nombre": "Melaza residual", "ID": "MelazaResidual", "precio": 1300, "cantidad": 25 },
+        { "nombre": "Masas hojaldres", "ID": "MasasHojaldres", "precio": 2500, "cantidad": 10 }
       ]
     },
     {
       "categoria": "Celiacos",
       "ingredientes": [
-        { "nombre": "Harinae arroz", "ID": "HarinaArroz", "precio": 2345, "cantidad": 20 },
-        { "nombre": "Trigo Sarraceno", "ID": "TrigoSarraceno", "precio": 567, "cantidad": 10 },
-        { "nombre": "Polvo hornear", "ID": "PolvoHornear", "precio": 1987, "cantidad": 15 },
-        { "nombre": "Psyllium", "ID": "Psyllium", "precio": 789, "cantidad": 8 }
+        { "nombre": "Harina arroz", "ID": "HarinaArroz", "precio": 800, "cantidad": 20 },
+        { "nombre": "Trigo Sarraceno", "ID": "TrigoSarraceno", "precio": 950, "cantidad": 10 },
+        { "nombre": "Polvo hornear", "ID": "PolvoHornear", "precio": 300, "cantidad": 15 },
+        { "nombre": "Psyllium", "ID": "Psyllium", "precio": 1220, "cantidad": 8 }
       ]
     }
   ]
@@ -80,15 +80,22 @@ function actualizarInfoProductoEnDOM(productoID) {
 
 function actualizarBoton(ingredienteID) {
   const boton = document.getElementById(`btn-${ingredienteID}`);
+  
   if (boton) {
     const ingredienteEnCarrito = carritoDeCompras.filter((item) => item.nombre.toLowerCase().replace(/\s/g, '') === ingredienteID.toLowerCase().replace(/\s/g, ''));
+    
     if (ingredienteEnCarrito.length > 0) {
       boton.textContent = `Agregado: ${ingredienteEnCarrito.length}`;
+      // Agregar la clase 'colorear'
+      boton.classList.add('colorear');
     } else {
       boton.textContent = "Agregar al carrito";
+      // Si el botón no está en la condición 'Agregado', eliminamos la clase 'colorear'
+      boton.classList.remove('colorear');
     }
   }
 }
+
 
 // Agregar ingredientes
 function agregarAlCarrito(ingredienteID) {

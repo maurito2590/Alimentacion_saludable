@@ -2,7 +2,7 @@ var valorAlmacenado = sessionStorage.getItem('preference_id');
 console.log('Valor almacenado:', valorAlmacenado);
 
 // Establecer el tiempo de sesion
-var tiempoExpiracion = 5 * 60 * 1000; // 5 minutos
+var tiempoExpiracion = 10 * 60 * 1000; // 5 minutos
 
 // Obtener el elemento HTML
 var temporizadorElemento = document.getElementById('temporizador');
@@ -66,10 +66,6 @@ var botonVolver = document.getElementById('botonVolver');
 botonVolver.addEventListener('click', function () {
   cerrarSesionSinAlerta();
 });
-
-
-
-
 
 
 const mp = new MercadoPago('TEST-d12f6116-b7ce-42a3-9755-1a03d4010128');
