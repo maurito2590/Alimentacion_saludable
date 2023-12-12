@@ -10,30 +10,34 @@
 </head>
 <body>
     <div class="resumen-container">
-        <div id="temporizador">
+        <div class="temporizador">
+            <span id="temporizador"></span>
         </div>
-        <div>
-            <h3>
+        <h2 class="resumen-title">
+            Resumen de Compra
+        </h2>
+        <div class="info-producto">
+            <h3 class="productos-title">
                 Productos: 
             </h3>
-            <span id="productos"></span>
+            <span class="productos" id="productos"></span>
         </div>
-        <div>
-            <h3>
+        <div class="precio-producto">
+            <h3 class="cantidad-title">
                 Cantidad Total: 
             </h3>
-            <span id="cantidad-total"></span>
+            <span class="cantidad" id="cantidad-total"></span>
         </div>
-        <div>            
-            <h3>
+        <div class="precio-total">            
+            <h3 class="cantidad-title">
                 Precio Total:
             </h3>
-            <span id="precio-total"></span>
+            <span class="total" id="precio-total"></span>
         </div>
-        <div id="botonVolver">
+        <div id="botonVolver" class="btnVolver">
             <button>Volver</button>
         </div>
-        <div id="wallet_container"></div>
+        <div class="mp-api" id="wallet_container"></div>
     </div>
     <script src="/js/pruebaMP.js"></script>
 </body>

@@ -119,6 +119,12 @@ if (comprarBtn) {
         
         // Reinicia el carrito a valores vacíos
         reiniciarCarrito();
+        actualizarCarritoYObtenerResumen();
+        resetearBotones();
+        calcularTotalCarrito();
+        sessionStorage.removeItem('datos_a_enviar');
+        sessionStorage.removeItem('preference_id');
+
         
         comprarBtn.disabled = false;
       } else {

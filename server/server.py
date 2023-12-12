@@ -10,6 +10,8 @@ sdk = mercadopago.SDK("TEST-1065602451630464-113019-fdea311b07b4364aa7d28e14b003
 
 @app.route('/procesar_compra', methods=['POST'])
 def procesar_compra():
+    productos_dict = {}
+
     data = request.json
 
     # Actualiza el diccionario de productos
