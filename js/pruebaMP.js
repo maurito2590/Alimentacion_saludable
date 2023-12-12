@@ -34,7 +34,7 @@ precioTotalElement.textContent = `$${datosAEnviarRecuperados.precio_total.toFixe
 
 
 // Establecer el tiempo de sesion
-var tiempoExpiracion = 30 * 60 * 1000; // 5 minutos
+var tiempoExpiracion = 5 * 60 * 1000; // 5 minutos
 
 // Obtener el elemento HTML
 var temporizadorElemento = document.getElementById('temporizador');

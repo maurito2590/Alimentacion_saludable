@@ -3,7 +3,7 @@ from flask_cors import CORS
 import mercadopago
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/procesar_compra": {"origins": "*", "allow_headers": ["Content-Type"]}})
 
 productos_dict = {}  # Diccionario para rastrear cantidades de productos
 sdk = mercadopago.SDK("TEST-1065602451630464-113019-fdea311b07b4364aa7d28e14b003a1d1-200244363")
@@ -50,4 +50,4 @@ def procesar_compra():
     return jsonify({"mensaje": "Datos recibidos correctamente", "data": response_data, "preference_id": preference['id']})
 
 if __name__ == '__main__':
-    app.run(port=8001)
+    app.run()
