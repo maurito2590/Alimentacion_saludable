@@ -49,5 +49,5 @@ def procesar_compra():
 
     return jsonify({"mensaje": "Datos recibidos correctamente", "data": response_data, "preference_id": preference['id']})
 
-if __name__ == '__main__':
-    app.run()
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5001)

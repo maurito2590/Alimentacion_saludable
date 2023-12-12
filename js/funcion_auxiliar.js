@@ -95,7 +95,7 @@ if (comprarBtn) {
     sessionStorage.setItem('datos_a_enviar', JSON.stringify(datosAEnviar));
 
     // Solicitud POST
-    fetch('https://yomau2590.pythonanywhere.com/procesar_compra.', {
+    fetch('https://yomau2590.pythonanywhere.com/procesar_compra', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
